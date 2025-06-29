@@ -1,10 +1,4 @@
----
-layout: default
-title: "Bakary N’Tji Diallo, PhD"
-description: "Computational Biologist & Bioinformatician"
----
-
-# Bakary N’Tji Diallo, PhD
+# Bakary N’Tji Diallo
 
 I’m a computational biologist and bioinformatician helping in discovery new medecines with computer-aided drug design, molecular modelling, and AI-driven cheminformatics.  
 
