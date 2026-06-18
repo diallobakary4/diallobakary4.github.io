@@ -3,13 +3,12 @@ project:
   output-dir: docs
 
 # Meta
-description-meta: "Quarto Academic Website Template adapted by Dr. Gang He"
-author-meta: "Dr. Gang He"
+description-meta: "Bakary N'tji Diallo — personal academic website"
+author-meta: "Bakary N'tji Diallo"
 
 website:
   title: "Bakary N'tji Diallo"
-  image: "https://quarto.org/quarto.png"
-  description: "Quarto Academic Website Template adapted by Dr. Gang He"
+  description: "Computational biology, cheminformatics, molecular modelling, AI-driven drug discovery"
  
   navbar:
     background: light  # You can change the background color here
@@ -47,12 +46,12 @@ website:
 
     right: 
       - text: CV
-        href: files/Bakary_Ntji_Diallo_CV_Resume_2026-01-02.pdf
+        href: files/bakary-diallo-cv.pdf
       - icon: github
         href: https://github.com/diallobakary4
         target: _blank
       - text: "{{< fa brands bluesky >}}"
-        href: https://bsky.app
+        href: https://bsky.app/profile/diallobakary4.bsky.social
         target: _blank      
       - icon: rss
         href: posts.xml
@@ -61,14 +60,14 @@ website:
   page-navigation: true
   
   page-footer: 
-    left: "[Your Name](http://www.github.com) &copy; <script>document.write(new Date().getFullYear())</script>" 
-    center: "Build on [Quarto Academic Website Template](https://github.com/diallobakary4) adapted by [Dr. Gang He](http://drganghe.github.io)"
+    left: "[Bakary N'tji Diallo](https://github.com/diallobakary4) ©"
+    center: "Built on [Quarto Academic Website Template](https://github.com/diallobakary4/diallobakary4.github.io) adapted by [Dr. Gang He](http://drganghe.github.io)"
     right:  
       - icon: github
         href: https://github.com/diallobakary4
         target: _blank
       - text: "{{< fa brands bluesky >}}" 
-        href: https://bsky.app
+        href: https://bsky.app/profile/diallobakary4.bsky.social
         target: _blank
       - icon: rss
         href: posts.xml
@@ -82,7 +81,7 @@ website:
 
   draft-mode: unlinked
   
-  repo-url: https://github.com/diallobakary4
+  repo-url: https://github.com/diallobakary4/diallobakary4.github.io
 #  repo-actions: [edit, issue, source]
   
   open-graph: true
@@ -93,8 +92,8 @@ website:
   site-url: "https://diallobakary4.github.io"
   
   google-analytics:
-    tracking-id: ""  # Please delete or replace with your own tracking ID
-    anonymize-ip: true 
+   tracking-id: "G-76YV6GG89L"  # Please delete or replace with your own tracking ID
+   anonymize-ip: true
 
 bibliography: references.bib  # Add references.bib to the root folder to enable the bibliography function
 

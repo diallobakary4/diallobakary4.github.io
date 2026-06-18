@@ -81,19 +81,22 @@ listing:   # Comment the listing section and delete corresponding lines in the i
 I’m a computational biologist and bioinformatician helping in discovery new
 medecines with computer-aided drug design, molecular modelling, and AI-driven
 cheminformatics. I am currently a postdoctoral research associate at the
-University of Bamako in Mali. I received my PhD in Computational Biology from Rhodes
-University (South Africa) in 2021, where I applied computational methods
+[University of Bamako](https://usttb-edu.org/) in Mali. I received my PhD
+in Computational Biology from
+[Rhodes University](https://www.ru.ac.za/) (South Africa) in 2021, where I
+applied computational methods
 for drug discovery and molecular modeling. My research interests include
 computer-aided drug design, molecular docking, virtual
 screening and cheminformatics.
 
 ## Experience
 
-- Researcher, Univerisity
+- Researcher, [University of Bamako](https://usttb-edu.org/)
 
 ## Education
 
-- PhD, Univerisity
+- PhD,
+  [Rhodes University](https://www.ru.ac.za/)
 
 :::
 

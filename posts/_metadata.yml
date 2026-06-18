@@ -1,8 +1,31 @@
+author:
+  - name: Bakary N’tji Diallo
+    orcid: 0000-0003-1741-2979
+
+# bibliography: ../references.bib
+# csl: ../nature.csl
+
+toc: true
+number-sections: true
+date-modified: last-modified
+
+format:
+  html:
+    code-fold: true
+    fig-cap-location: bottom
+
+crossref:
+  fig-title: "Figure"
+  tbl-title: "Table"
+  eq-prefix: "Equation"
+
+freeze: true
+
 # options specified here will apply to all posts in this folder
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
-freeze: true
+# freeze: true
 
 # Enable banner style title blocks
 title-block-banner: false
