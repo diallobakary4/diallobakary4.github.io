@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Bakary N’tji Diallo">
+<meta name="author" content="Le Anh Tuan Nguyen">
+<meta name="author" content="Laurent Dembélé">
+<meta name="author" content="Fidèle Ntie-Kang">
+<meta name="author" content="Abdoulaye Djimde">
+<meta name="dcterms.date" content="2026-07-28">
+<meta name="keywords" content="virtual screening, PfBDP1, drug discovery, plasmodium">
+
+<title>Large-Scale Virtual Screening of Enamine 4.6 Millions compounds against Plasmodium Bromodomain PfBDP1</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9eee274c4b2bb5eadf814739072c141d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+<meta name="robots" content="noindex, nofollow">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta name="citation_title" content="Large-Scale Virtual Screening of  Enamine 4.6 Millions compounds against Plasmodium Bromodomain PfBDP1 ">
+<meta name="citation_abstract" content="Malaria control is threatened by the continued emergence of drug-resistant
+*Plasmodium falciparum*, creating a need for compounds that act through new
+parasite targets. *P. falciparum* bromodomain protein 1 (PfBDP1) regulates
+genes required for erythrocyte invasion and represents a structurally
+characterized, parasite-specific target. We performed structure-based
+virtual screening of 4,671,138 in-stock compounds from the Enamine
+Screening Collection against the PfBDP1 bromodomain. Docked compounds were prioritized
+using docking score, physicochemical properties,
+pan-assay interference alerts, and pose-quality assessment. Five candidates
+and the co-crystallized ligand I5K were then evaluated using 100-ns molecular
+dynamics simulations and MM/GBSA endpoint binding-energy estimates.
+Z985612796 showed the most consistent computational profile, combining low
+protein and ligand deviations, limited atomic fluctuations, persistent
+hydrogen bonding, restricted conformational sampling, and a dominant
+low-energy basin. It also produced the most negative MM/GBSA estimate,
+−30.70 ± 0.63 kcal/mol, compared with −12.65 ± 0.56 kcal/mol for I5K.
+Z1723441401 and Z9302730850 also showed favorable calculated interactions
+but greater conformational heterogeneity. These findings prioritize
+Z985612796 for further evaluation as a potential PfBDP1-binding candidate.
+Further experimental binding and functional assays are required to confirm the
+predicted interaction and determine antimalarial activity.
+">
+<meta name="citation_keywords" content="virtual screening,PfBDP1,drug discovery,plasmodium">
+<meta name="citation_author" content="Bakary N&amp;amp;#039;tji Diallo">
+<meta name="citation_author" content="Le Anh Tuan Nguyen">
+<meta name="citation_author" content="Laurent Dembélé">
+<meta name="citation_author" content="Fidèle Ntie-Kang">
+<meta name="citation_author" content="Abdoulaye Djimde">
+<meta name="citation_publication_date" content="2026-07-28">
+<meta name="citation_cover_date" content="2026-07-28">
+<meta name="citation_year" content="2026">
+<meta name="citation_online_date" content="2026-07-28">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=RDKit: Open-source cheminformatics software;,citation_author=Greg Landrum;,citation_author=others;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://www.rdkit.org/;">
+<meta name="citation_reference" content="citation_title=Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings;,citation_author=Christopher A Lipinski;,citation_author=Franco Lombardo;,citation_author=Beryl W Dominy;,citation_author=Paul J Feeney;,citation_publication_date=1997;,citation_cover_date=1997;,citation_year=1997;,citation_issue=1-3;,citation_doi=10.1016/S0169-409X(96)00423-1;,citation_volume=23;,citation_journal_title=Advanced Drug Delivery Reviews;">
+<meta name="citation_reference" content="citation_title=Tavolivos/Molecular-dynamics-Interaction-plot: Interaction plot from Molecular Dynamics;,citation_abstract=This is are free algorithm to plot interaction plot analysis.;,citation_author=Gustavo Olvios;,citation_publication_date=2021-02;,citation_cover_date=2021-02;,citation_year=2021;,citation_fulltext_html_url=https://zenodo.org/records/4516538;,citation_doi=10.5281/zenodo.4516538;,citation_publisher=Zenodo;">
+<meta name="citation_reference" content="citation_title=PLIP 2025: Introducing protein–protein interactions to the protein–ligand interaction profiler;,citation_abstract=PLIP, the protein–ligand&nbsp;interaction profiler, analyses molecular interactions in protein structures. PLIP detects eight types of non-covalent interactions. Initially focused on small-molecule, DNA, and RNA interactions to a protein, the current release incorporates protein–protein interactions. We document the usefulness of this feature by comparing PLIP interactions of the cancer drug venetoclax with the native protein–protein interaction of Bcl-2 and BAX. PLIP reveals how the drug mimics the native interaction, as there is critical overlap in the interaction profiles. PLIP is available as a web server, source code with containers, and Jupyter notebook. The PLIP web server is online at https://plip-tool.biotec.tu-dresden.de.;,citation_author=Philipp Schake;,citation_author=Sarah Naomi Bolz;,citation_author=Katja Linnemann;,citation_author=Michael Schroeder;,citation_publication_date=2025-07;,citation_cover_date=2025-07;,citation_year=2025;,citation_fulltext_html_url=https://doi.org/10.1093/nar/gkaf361;,citation_issue=W1;,citation_doi=10.1093/nar/gkaf361;,citation_issn=1362-4962;,citation_volume=53;,citation_journal_title=Nucleic Acids Research;">
+<meta name="citation_reference" content="citation_title=Malaria;,citation_author=World Health Organization;,citation_publication_date=2025-12;,citation_cover_date=2025-12;,citation_year=2025;,citation_fulltext_html_url=https://www.who.int/news-room/fact-sheets/detail/malaria;">
+<meta name="citation_reference" content="citation_title=Multiple first-line therapies as part of the response to antimalarial drug resistance;,citation_abstract=An implementation guide;,citation_author=World Health Organization;,citation_language=en-US;,citation_publisher=https://www.who.int/publications/i/item/9789240103603;">
+<meta name="citation_reference" content="citation_title=Designing the next generation of medicines for malaria control and eradication;,citation_author=Jeremy N. Burrows;,citation_author=Rob Hooft van Huijsduijnen;,citation_author=Jörg J. Möhrle;,citation_author=Claude Oeuvray;,citation_author=Timothy NC Wells;,citation_publication_date=2013-06;,citation_cover_date=2013-06;,citation_year=2013;,citation_issue=1;,citation_doi=10.1186/1475-2875-12-187;,citation_issn=1475-2875;,citation_pmid=23742293;,citation_volume=12;,citation_language=en-US;,citation_journal_title=Malaria Journal;,citation_publisher=BioMed Central;">
+<meta name="citation_reference" content="citation_title=New developments in anti-malarial target candidate and product profiles;,citation_author=Jeremy N. Burrows;,citation_author=Stephan Duparc;,citation_author=Winston E. Gutteridge;,citation_author=Rob Hooft van Huijsduijnen;,citation_author=Wiweka Kaszubska;,citation_author=Fiona Macintyre;,citation_author=Sébastien Mazzuri;,citation_author=Jörg J. Möhrle;,citation_author=Timothy N. C. Wells;,citation_publication_date=2017-01;,citation_cover_date=2017-01;,citation_year=2017;,citation_issue=1;,citation_doi=10.1186/s12936-016-1675-x;,citation_issn=1475-2875;,citation_volume=16;,citation_language=en-US;,citation_journal_title=Malaria Journal;,citation_publisher=BioMed Central;">
+<meta name="citation_reference" content="citation_title=Advances in malaria pharmacology and the online guide to MALARIA PHARMACOLOGY: IUPHAR review 38;,citation_author=Jane F. Armstrong;,citation_author=Brice Campo;,citation_author=Stephen P. H. Alexander;,citation_author=Lauren B. Arendse;,citation_author=Xiu Cheng;,citation_author=Anthony P. Davenport;,citation_author=Elena Faccenda;,citation_author=David A. Fidock;,citation_author=Karla P. Godinez-Macias;,citation_author=Simon D. Harding;,citation_author=Nobutaka Kato;,citation_author=Marcus C. S. Lee;,citation_author=Madeline R. Luth;,citation_author=Ralph Mazitschek;,citation_author=Nimisha Mittal;,citation_author=Jacquin C. Niles;,citation_author=John Okombo;,citation_author=Sabine Ottilie;,citation_author=Charisse Flerida A. Pasaje;,citation_author=Alexandra S. Probst;,citation_author=Mukul Rawat;,citation_author=Frances Rocamora;,citation_author=Tomoyo Sakata-Kato;,citation_author=Christopher Southan;,citation_author=Michael Spedding;,citation_author=Mark A. Tye;,citation_author=Tuo Yang;,citation_author=Na Zhao;,citation_author=Jamie A. Davies;,citation_publication_date=2023-08;,citation_cover_date=2023-08;,citation_year=2023;,citation_issue=15;,citation_doi=10.1111/bph.16144;,citation_issn=0007-1188, 1476-5381;,citation_volume=180;,citation_language=en-US;,citation_journal_title=British Journal of Pharmacology;">
+<meta name="citation_reference" content="citation_title=Designing the next generation of medicines for malaria control and eradication;,citation_author=Jeremy N. Burrows;,citation_author=Rob Hooft van Huijsduijnen;,citation_author=Jörg J. Möhrle;,citation_author=Claude Oeuvray;,citation_author=Timothy NC Wells;,citation_publication_date=2013-06;,citation_cover_date=2013-06;,citation_year=2013;,citation_issue=1;,citation_doi=10.1186/1475-2875-12-187;,citation_issn=1475-2875;,citation_pmid=23742293;,citation_volume=12;,citation_language=en-US;,citation_journal_title=Malaria Journal;,citation_publisher=BioMed Central;">
+<meta name="citation_reference" content="citation_title=Plasmodium falciparum cGMP-Dependent Protein Kinase – A Novel Chemotherapeutic Target;,citation_author=David Rotella;,citation_author=John Siekierka;,citation_author=Purnima Bhanot;,citation_publication_date=2021-02;,citation_cover_date=2021-02;,citation_year=2021;,citation_doi=10.3389/fmicb.2020.610408;,citation_issn=1664-302X;,citation_volume=11;,citation_journal_title=Frontiers in Microbiology;">
+<meta name="citation_reference" content="citation_title=&amp;amp;amp;lt;i&amp;gt;Plasmodium&amp;lt;/i&amp;gt; Kinases as Potential Drug Targets for Malaria: Challenges and Opportunities;,citation_author=Lauren B. Arendse;,citation_author=Susan Wyllie;,citation_author=Kelly Chibale;,citation_author=Ian H. Gilbert;,citation_publication_date=2021-03;,citation_cover_date=2021-03;,citation_year=2021;,citation_issue=3;,citation_doi=10.1021/acsinfecdis.0c00724;,citation_issn=2373-8227, 2373-8227;,citation_volume=7;,citation_language=en-US;,citation_journal_title=ACS Infectious Diseases;">
+<meta name="citation_reference" content="citation_title=Inhibition of resistance-refractory P. falciparum kinase PKG delivers prophylactic, blood stage, and transmission-blocking antiplasmodial activity;,citation_author=Manu Vanaerschot;,citation_author=James M. Murithi;,citation_author=Charisse Flerida A. Pasaje;,citation_author=Sébastien Ghidelli-Disse;,citation_author=Leslie Dwomoh;,citation_author=Michael Bird;,citation_author=Natasha Spottiswoode;,citation_author=Nisha Mittal;,citation_author=Lubbe B. Arendse;,citation_author=Elinor Owen;,citation_author=Karl J. Wicht;,citation_author=Gabriele Siciliano;,citation_author=Maike Bösche;,citation_author=Tiago Yeo;,citation_author=Tushar R. Kumar;,citation_author=Sachel Mok;,citation_author=Emily F. Carpenter;,citation_author=Matthew J. Giddins;,citation_author=Matthew A. Phillips;,citation_author=Manuel Llinás;,citation_author=Marcus Bantscheff;,citation_author=Elizabeth A. Winzeler;,citation_author=Yuthavong Yuthavong;,citation_author=Kelly Chibale;,citation_author=Ian H. Gilbert;,citation_author=Lyn-Marie Birkholtz;,citation_author=David A. Fidock;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_issue=7;,citation_doi=10.1016/j.chembiol.2020.05.008;,citation_pmid=32359426;,citation_volume=27;,citation_journal_title=Cell Chemical Biology;">
+<meta name="citation_reference" content="citation_title=High-throughput screening of the Plasmodium falciparum cGMP-dependent protein kinase identified a thiazole scaffold which kills erythrocytic and sexual stage parasites;,citation_author=Maria Penzo;,citation_author=Laura Heras-Dueña;,citation_author=Lydia Mata-Cantero;,citation_author=Beatriz Diaz-Hernandez;,citation_author=Maria-Jesus Vazquez-Muñiz;,citation_author=Sonja Ghidelli-Disse;,citation_author=Gerard Drewes;,citation_author=Elena Fernandez-Alvaro;,citation_author=David A. Baker;,citation_publication_date=2019-05;,citation_cover_date=2019-05;,citation_year=2019;,citation_issue=1;,citation_doi=10.1038/s41598-019-42801-x;,citation_issn=2045-2322;,citation_volume=9;,citation_language=en-US;,citation_journal_title=Scientific Reports;,citation_publisher=Nature Publishing Group;">
+<meta name="citation_reference" content="citation_title=8EM8: Co-crystal structure of the cGMP-Dependent protein kinase PKG from Plasmodium falciparum in complex with RY-1-165;,citation_author=RCSB Protein Data Bank;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_doi=10.2210/pdb8EM8/pdb;,citation_publisher=RCSB PDB entry;">
+<meta name="citation_reference" content="citation_title=PDB-REDO for PDB ID 8em8;,citation_publication_date=2026;,citation_cover_date=2026;,citation_year=2026;,citation_publisher=https://pdb-redo.eu/db/8em8;">
+<meta name="citation_reference" content="citation_title=Structure-based virtual screening against multiple Plasmodium falciparum kinases reveals antimalarial compounds;,citation_author=Priya Godara;,citation_author=K. Sony Reddy;,citation_author=Welka Sahu;,citation_author=Biswajit Naik;,citation_author=Varshita Srivastava;,citation_author=Rusham Das;,citation_author=Ajay Mahor;,citation_author=Prateek Kumar;,citation_author=Rajanish Giri;,citation_author=Jivanage Anirudh;,citation_author=Hemanth Naick Banavath;,citation_author=Tarun Kumar Bhatt;,citation_author=Amit Kumar Goyal;,citation_author=Dhaneswar Prusty;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=6;,citation_doi=10.1007/s11030-023-10770-z;,citation_pmid=38127294;,citation_volume=28;,citation_journal_title=Molecular Diversity;">
+<meta name="citation_reference" content="citation_title=Assortative pairing and life history strategy – a cross-cultural study;,citation_author=A. J. Figueredo;,citation_author=P. S. A. Wolf;,citation_publication_date=2009;,citation_cover_date=2009;,citation_year=2009;,citation_doi=https://doi.org/10.1007/s12110-009-9068-2;,citation_volume=20;,citation_journal_title=Human Nature;">
+<meta name="citation_reference" content="citation_title=Global integrated drought monitoring and prediction system (GIDMaPS) data sets;,citation_author=Z. Hao;,citation_author=A. AghaKouchak;,citation_author=N. Nakhjiri;,citation_author=A Farahmand;,citation_publication_date=2014;,citation_cover_date=2014;,citation_year=2014;,citation_publisher=&amp;amp;amp;lt;i&amp;gt;figshare&amp;lt;/i&amp;gt; http://dx.doi.org/10.6084/m9.figshare.853801;">
+<meta name="citation_reference" content="citation_title=RCSB PDB - 8EM8: Co-crystal structure of the cGMP-dependent protein kinase PKG from plasmodium falciparum in complex with RY-1-165;,citation_author=RCSB Protein Data Bank;,citation_fulltext_html_url=https://www.rcsb.org/structure/8EM8;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Pdb-tools: A swiss army knife for molecular structures [version 1; peer review: 2 approved];,citation_author=JPGLM Rodrigues;,citation_author=JMC Teixeira;,citation_author=M Trellet;,citation_author=AMJJ Bonvin;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_issue=1961;,citation_doi=10.12688/f1000research.17456.1;,citation_volume=7;,citation_journal_title=F1000Research;">
+<meta name="citation_reference" content="citation_title=Openmm/pdbfixer;,citation_publication_date=2026-03-17;,citation_cover_date=2026-03-17;,citation_year=2026;,citation_fulltext_html_url=https://github.com/openmm/pdbfixer;">
+<meta name="citation_reference" content="citation_title=The RDKit documentation  the RDKit 2025.09.6 documentation;,citation_fulltext_html_url=https://www.rdkit.org/docs/index.html;">
+<meta name="citation_reference" content="citation_title=Compound collections - enamine;,citation_fulltext_html_url=https://enamine.net/compound-collections;">
+<meta name="citation_reference" content="citation_title=Protein-ligand blind docking using QuickVina-w with inter-process spatio-temporal integration;,citation_author=Nafisa M. Hassan;,citation_author=Amr A. Alhossary;,citation_author=Yuguang Mu;,citation_author=Chee-Keong Kwoh;,citation_publication_date=2017-11-13;,citation_cover_date=2017-11-13;,citation_year=2017;,citation_fulltext_html_url=http://dx.doi.org/10.1038/s41598-017-15571-7;,citation_issue=1;,citation_doi=10.1038/s41598-017-15571-7;,citation_volume=7;,citation_language=en;,citation_journal_title=Scientific Reports;">
+<meta name="citation_reference" content="citation_title=Quantifying the chemical beauty of drugs;,citation_author=G. Richard Bickerton;,citation_author=Gaia V. Paolini;,citation_author=Jérémy Besnard;,citation_author=Sorel Muresan;,citation_author=Andrew L. Hopkins;,citation_publication_date=2012-01-24;,citation_cover_date=2012-01-24;,citation_year=2012;,citation_fulltext_html_url=http://dx.doi.org/10.1038/nchem.1243;,citation_issue=2;,citation_doi=10.1038/nchem.1243;,citation_volume=4;,citation_language=en;,citation_journal_title=Nature Chemistry;">
+<meta name="citation_reference" content="citation_title=Open babel: An open chemical toolbox;,citation_author=Noel M O’Boyle;,citation_author=Michael Banck;,citation_author=Craig A James;,citation_author=Chris Morley;,citation_author=Tim Vandermeersch;,citation_author=Geoffrey R Hutchison;,citation_publication_date=2011-10-07;,citation_cover_date=2011-10-07;,citation_year=2011;,citation_fulltext_html_url=http://dx.doi.org/10.1186/1758-2946-3-33;,citation_issue=1;,citation_doi=10.1186/1758-2946-3-33;,citation_volume=3;,citation_language=en;,citation_journal_title=Journal of Cheminformatics;">
+<meta name="citation_reference" content="citation_title=OSPool;,citation_author=OSG;,citation_publication_date=2006;,citation_cover_date=2006;,citation_year=2006;,citation_fulltext_html_url=https://osg-htc.org/services/open_science_pool.html;,citation_doi=10.21231/906P-4D78;">
+<meta name="citation_reference" content="citation_title=Open force field: Next-generation force fields with open data, open software, and open science;,citation_author=Jeffrey Wagner;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_fulltext_html_url=http://dx.doi.org/10.25080/gerudo-f2bc6f59-032;,citation_doi=10.25080/gerudo-f2bc6f59-032;,citation_publisher=NumFOCUS - Insight Software Consortium (ITK);">
+<meta name="citation_reference" content="citation_title=OpenMM 8: Molecular dynamics simulation with machine learning potentials;,citation_author=Peter Eastman;,citation_author=Raimondas Galvelis;,citation_author=Raúl P. Peláez;,citation_author=Charlles R. A. Abreu;,citation_author=Stephen E. Farr;,citation_author=Emilio Gallicchio;,citation_author=Anton Gorenko;,citation_author=Michael M. Henry;,citation_author=Frank Hu;,citation_author=Jing Huang;,citation_author=Andreas Krämer;,citation_author=Julien Michel;,citation_author=Joshua A. Mitchell;,citation_author=Vijay S. Pande;,citation_author=João PGLM Rodrigues;,citation_author=Jaime Rodriguez-Guerra;,citation_author=Andrew C. Simmonett;,citation_author=Sukrit Singh;,citation_author=Jason Swails;,citation_author=Philip Turner;,citation_author=Yuanqing Wang;,citation_author=Ivy Zhang;,citation_author=John D. Chodera;,citation_author=Gianni De Fabritiis;,citation_author=Thomas E. Markland;,citation_publication_date=2023-12-28;,citation_cover_date=2023-12-28;,citation_year=2023;,citation_fulltext_html_url=http://dx.doi.org/10.1021/acs.jpcb.3c06662;,citation_issue=1;,citation_doi=10.1021/acs.jpcb.3c06662;,citation_volume=128;,citation_language=en;,citation_journal_title=The Journal of Physical Chemistry B;">
+<meta name="citation_reference" content="citation_title=Rdkit/rdkit: 2025_09_6 (Q3 2025) Release;,citation_author=Greg Landrum;,citation_author=Paolo Tosco;,citation_author=Brian Kelley;,citation_author=Ricardo Rodriguez;,citation_author=David Cosgrove;,citation_author=Riccardo Vianello;,citation_author=sriniker;,citation_author=Peter Gedeck;,citation_author=Gareth Jones;,citation_author=Eisuke Kawashima;,citation_author=undefined NadineSchneider;,citation_author=Dan Nealschneider;,citation_author=undefined cdd;,citation_author=Andrew Dalke;,citation_author=Matt Swain;,citation_author=Brian Cole;,citation_author=Samo Turk;,citation_author=Aleksandr Savelev;,citation_author=Niels Maeder;,citation_author=Rachel Walker;,citation_author=Alain Vaucher;,citation_author=Maciej Wójcikowski;,citation_author=Hussein Faara;,citation_author=Ichiru Take;,citation_author=Vincent F. Scalfani;,citation_author=Daniel Probst;,citation_author=Kazuya Ujihara;,citation_author=Yakov Pechersky;,citation_author=Jeremy Monat;,citation_author=Juuso Lehtivarjo;,citation_publication_date=2026-02-27;,citation_cover_date=2026-02-27;,citation_year=2026;,citation_fulltext_html_url=https://zenodo.org/doi/10.5281/zenodo.18797641;,citation_doi=10.5281/ZENODO.18797641;,citation_publisher=Zenodo;">
+<meta name="citation_reference" content="citation_title=Meeko: Molecule parametrization and software interoperability for docking and beyond;,citation_author=Diogo Santos-Martins;,citation_author=Yiran He;,citation_author=Jerome Eberhardt;,citation_author=Parnika Sharma;,citation_author=Niccolò Bruciaferri;,citation_author=Matthew Holcomb;,citation_author=Manuel A. Llanos;,citation_author=Althea Hansel-Harris;,citation_author=Allison Pearl Barkdull;,citation_author=Andreas Frank Tillack;,citation_author=Giulia Bianco;,citation_author=May-Linn Paulsen;,citation_author=Joani Mato;,citation_author=Ishan Taneja;,citation_author=Stefano Forli;,citation_publication_date=2025-12-11;,citation_cover_date=2025-12-11;,citation_year=2025;,citation_fulltext_html_url=http://dx.doi.org/10.1021/acs.jcim.5c02271;,citation_issue=24;,citation_doi=10.1021/acs.jcim.5c02271;,citation_volume=65;,citation_language=en;,citation_journal_title=Journal of Chemical Information and Modeling;">
+<meta name="citation_reference" content="citation_title=OpenMM 7: Rapid development of high performance algorithms for molecular dynamics;,citation_author=Peter Eastman;,citation_author=Jason Swails;,citation_author=John D. Chodera;,citation_author=Robert T. McGibbon;,citation_author=Yutong Zhao;,citation_author=Kyle A. Beauchamp;,citation_author=Lee-Ping Wang;,citation_author=Andrew C. Simmonett;,citation_author=Matthew P. Harrigan;,citation_author=Chaya D. Stern;,citation_author=Rafal P. Wiewiora;,citation_author=Bernard R. Brooks;,citation_author=Vijay S. Pande;,citation_editor=Robert Gentleman;,citation_publication_date=2017-07-26;,citation_cover_date=2017-07-26;,citation_year=2017;,citation_fulltext_html_url=http://dx.doi.org/10.1371/journal.pcbi.1005659;,citation_issue=7;,citation_doi=10.1371/journal.pcbi.1005659;,citation_volume=13;,citation_language=en;,citation_journal_title=PLOS Computational Biology;">
+<meta name="citation_reference" content="citation_title=Enamine ltd.: The science and business of organic chemistry and beyond;,citation_author=Oleksandr O. Grygorenko;,citation_publication_date=2021-11-29;,citation_cover_date=2021-11-29;,citation_year=2021;,citation_fulltext_html_url=http://dx.doi.org/10.1002/ejoc.202101210;,citation_issue=47;,citation_doi=10.1002/ejoc.202101210;,citation_volume=2021;,citation_language=en;,citation_journal_title=European Journal of Organic Chemistry;">
+<meta name="citation_reference" content="citation_title=PoseBusters: AI-based docking methods fail to generate physically valid poses or generalise to novel sequences;,citation_author=Martin Buttenschoen;,citation_author=Garrett M Morris;,citation_author=Charlotte M Deane;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=9;,citation_volume=15;,citation_journal_title=Chemical Science;,citation_publisher=Royal Society of Chemistry;">
+<meta name="citation_reference" content="citation_title=AutoDock vina: Improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading;,citation_author=Oleg Trott;,citation_author=Arthur J. Olson;,citation_publication_date=2009-06-04;,citation_cover_date=2009-06-04;,citation_year=2009;,citation_fulltext_html_url=http://dx.doi.org/10.1002/jcc.21334;,citation_issue=2;,citation_doi=10.1002/jcc.21334;,citation_volume=31;,citation_language=en;,citation_journal_title=Journal of Computational Chemistry;">
+<meta name="citation_reference" content="citation_title=Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings;,citation_author=Christopher A Lipinski;,citation_author=Franco Lombardo;,citation_author=Beryl W Dominy;,citation_author=Paul J Feeney;,citation_publication_date=1997;,citation_cover_date=1997;,citation_year=1997;,citation_issue=1-3;,citation_volume=23;,citation_journal_title=Advanced drug delivery reviews;,citation_publisher=Elsevier;">
+<meta name="citation_reference" content="citation_title=African natural products database;,citation_author=ANPDB Consortium;,citation_fulltext_html_url=https://phabidb.vm.uni-freiburg.de/anpdb/;">
+<meta name="citation_reference" content="citation_title=Novel inhibitors of plasmodium falciparum dihydroorotate dehydrogenase with anti-malarial activity in the mouse model;,citation_author=Michael L. Booker;,citation_author=Cecilia M. Bastos;,citation_author=Melissa L. Kramer;,citation_author=others;,citation_publication_date=2010;,citation_cover_date=2010;,citation_year=2010;,citation_issue=43;,citation_doi=10.1074/jbc.M110.162081;,citation_volume=285;,citation_journal_title=Journal of Biological Chemistry;">
+<meta name="citation_reference" content="citation_title=Fast, accurate, and reliable molecular docking with QuickVina 2;,citation_author=Amr Alhossary;,citation_author=Stephan D. Handoko;,citation_author=Yuguang Mu;,citation_author=Chee-Keong Kwoh;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_issue=13;,citation_doi=10.1093/bioinformatics/btv082;,citation_volume=31;,citation_journal_title=Bioinformatics;">
+<meta name="citation_reference" content="citation_title=Characterization of competitive inhibitors of plasmodium falciparum cGMP-dependent protein kinase;,citation_author=Tyler Eck;,citation_author=Mariana Laureano de Souza;,citation_author=Melvin Delvillar;,citation_author=Kutub Ashraf;,citation_author=Rammohan R Yadav Bheemanaboina;,citation_author=Ramappa Chakrasali;,citation_author=Tamara Kreiss;,citation_author=John J Siekierka;,citation_author=David P Rotella;,citation_author=Purnima Bhanot;,citation_author=others;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_issue=7;,citation_volume=23;,citation_journal_title=Chembiochem;,citation_publisher=Wiley Online Library;">
+<meta name="citation_reference" content="citation_title=Spirocyclic compounds as innovative tools in drug discovery for medicinal chemists;,citation_author=Marina T Varela;,citation_author=Gleiston G Dias;,citation_author=Luiz Fernando N Oliveira;,citation_author=Ramon G Oliveira;,citation_author=Francielle D Aguiar;,citation_author=Joao Pedro Nogueira;,citation_author=Luiza R Cruz;,citation_author=Luiz C Dias;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_volume=287;,citation_journal_title=European Journal of Medicinal Chemistry;,citation_publisher=Elsevier;">
+<meta name="citation_reference" content="citation_title=Antimalarial drug resistance: Linking plasmodium falciparum parasite biology to the clinic;,citation_author=Benjamin Blasco;,citation_author=Didier Leroy;,citation_author=David A Fidock;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_issue=8;,citation_volume=23;,citation_journal_title=Nature Medicine;,citation_publisher=Nature Publishing Group;">
+<meta name="citation_reference" content="citation_title=Co-crystal structure of the cGMP-dependent protein kinase PKG from plasmodium falciparum in complex with RY-1-165;,citation_author=A. Hutchinson;,citation_author=A. Dong;,citation_author=A. Seitova;,citation_author=P. Bhanot;,citation_author=C. H. Arrowsmith;,citation_author=A. M. Edwards;,citation_author=L. Halabelian;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_doi=10.2210/pdb8EM8/pdb;,citation_volume=8EM8;,citation_journal_title=Protein Data Bank;">
+<meta name="citation_reference" content="citation_title=A potent series targeting the malarial cGMP-dependent protein kinase clears infection and blocks transmission;,citation_author=David A. Baker;,citation_author=Lindsay B. Stewart;,citation_author=Jonathan M. Large;,citation_author=Paul W. Bowyer;,citation_author=Keith H. Ansell;,citation_author=María B. Jiménez-Díaz;,citation_author=Majida El Bakkouri;,citation_author=Kristian Birchall;,citation_author=Koen J. Dechering;,citation_author=Nathalie S. Bouloc;,citation_author=Peter J. Coombs;,citation_author=David Whalley;,citation_author=Denise J. Harding;,citation_author=Ela Smiljanic-Hurley;,citation_author=Mary C. Wheldon;,citation_author=Eloise M. Walker;,citation_author=Johannes T. Dessens;,citation_author=María José Lafuente;,citation_author=Laura M. Sanz;,citation_author=Francisco-Javier Gamo;,citation_author=Santiago B. Ferrer;,citation_author=Raymond Hui;,citation_author=Teun Bousema;,citation_author=Iñigo Angulo-Barturén;,citation_author=Andy T. Merritt;,citation_author=Simon L. Croft;,citation_author=Winston E. Gutteridge;,citation_author=Catherine A. Kettleborough;,citation_author=Simon A. Osborne;,citation_publication_date=2017-09;,citation_cover_date=2017-09;,citation_year=2017;,citation_issue=1;,citation_doi=10.1038/s41467-017-00572-x;,citation_issn=2041-1723;,citation_volume=8;,citation_language=en-US;,citation_journal_title=Nature Communications;">
+<meta name="citation_reference" content="citation_title=Structure–activity relationship of a pyrrole based series of PfPKG inhibitors as anti-malarials;,citation_author=John A Gilleran;,citation_author=Kutub Ashraf;,citation_author=Melvin Delvillar;,citation_author=Tyler Eck;,citation_author=Raheel Fondekar;,citation_author=Edward B Miller;,citation_author=Ashley Hutchinson;,citation_author=Aiping Dong;,citation_author=Alma Seitova;,citation_author=Mariana Laureano De Souza;,citation_author=others;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=5;,citation_volume=67;,citation_journal_title=Journal of medicinal chemistry;,citation_publisher=ACS Publications;">
+<meta name="citation_reference" content="citation_title=Finlayiainmaclean/rdsl: Selection language for RDKit;,citation_publication_date=2026;,citation_cover_date=2026;,citation_year=2026;,citation_publisher=https://github.com/finlayiainmaclean/rdsl;">
+<meta name="citation_reference" content="citation_title=PROPKA3: Consistent treatment of internal and surface residues in empirical pK&amp;amp;amp;lt;sub&amp;gt;a&amp;lt;/sub&amp;gt; predictions;,citation_author=Mats H. M. Olsson;,citation_author=Christian R. Søndergaard;,citation_author=Michał Rostkowski;,citation_author=Jan H. Jensen;,citation_publication_date=2011;,citation_cover_date=2011;,citation_year=2011;,citation_issue=2;,citation_doi=10.1021/ct100578z;,citation_volume=7;,citation_journal_title=Journal of Chemical Theory and Computation;">
+<meta name="citation_reference" content="citation_title=CHARMM36m: An improved force field for folded and intrinsically disordered proteins;,citation_author=Jihyun Huang;,citation_author=Sarah Rauscher;,citation_author=Grzegorz Nawrocki;,citation_author=Tong Ran;,citation_author=Michael Feig;,citation_author=Bert L. Groot;,citation_author=Helmut Grubmüller;,citation_author=Alexander D. Jr. MacKerell;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_issue=1;,citation_doi=10.1038/nmeth.4067;,citation_volume=14;,citation_journal_title=Nature Methods;">
+<meta name="citation_reference" content="citation_title=CHARMM-GUI PDB manipulator for advanced modeling and simulations of proteins containing nonstandard residues;,citation_author=Sunhwan Jo;,citation_author=Xi Cheng;,citation_author=Shahidul M. Islam;,citation_author=Lei Huang;,citation_author=Huan Rui;,citation_author=Allen Zhu;,citation_author=Hui Sun Lee;,citation_author=Yifei Qi;,citation_author=Wei Han;,citation_author=Kenno Vanommeslaeghe;,citation_author=Alexander D. Jr. MacKerell;,citation_author=Benoı̂t Roux;,citation_author=Wonpil Im;,citation_publication_date=2014;,citation_cover_date=2014;,citation_year=2014;,citation_doi=10.1016/bs.apcsb.2014.06.002;,citation_volume=96;,citation_inbook_title=Advances in protein chemistry and structural biology;">
+<meta name="citation_reference" content="citation_title=LINCS: A linear constraint solver for molecular simulations - Hess - 1997 - Journal of Computational Chemistry - Wiley Online Library;,citation_author=Berk Hess;,citation_author=Henk Bekker;,citation_author=Herman J. C. Berendsen;,citation_author=Johannes G. E. M. Fraaije;,citation_publication_date=1997;,citation_cover_date=1997;,citation_year=1997;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/10.1002/(SICI)1096-987X(199709)18:12%3C1463::AID-JCC4%3E3.0.CO;2-H;,citation_issue=12;,citation_doi=10.1002/(SICI)1096-987X(199709)18:12%3C1463::AID-JCC4%3E3.0.CO;2-H;,citation_volume=18;">
+<meta name="citation_reference" content="citation_title=Settle: An analytical version of the SHAKE and RATTLE algorithm for rigid water models;,citation_abstract=An analytical algorithm, called SETTLE, for resetting the positions and velocities to satisfy the holonomic constraints on the rigid water model is presented. This method is still based on the Cartesian coordinate system and can be used in place of SHAKE and RATTLE. We implemented this algorithm in the SPASMS package of molecular mechanics and dynamics. Several series of molecular dynamics simulations were carried out to examine the performance of the new algorithm in comparison with the original RATTLE method. It was found that SETTLE is of higher accuracy and is faster than RATTLE with reasonable tolerances by three to nine times on a scalar machine. Furthermore, the performance improvement ranged from factors of 26 to 98 on a vector machine since the method presented is not iterative. © 1992 by John Wiley &amp;amp;amp; Sons, Inc.;,citation_author=Shuichi Miyamoto;,citation_author=Peter A. Kollman;,citation_publication_date=1992;,citation_cover_date=1992;,citation_year=1992;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.540130805;,citation_issue=8;,citation_doi=10.1002/jcc.540130805;,citation_issn=1096-987X;,citation_volume=13;,citation_journal_title=Journal of Computational Chemistry;">
+<meta name="citation_reference" content="citation_title=Canonical sampling through velocity rescaling;,citation_abstract=The authors present a new molecular dynamics algorithm for sampling the canonical distribution. In this approach the velocities of all the particles are rescaled by a properly chosen random factor. The algorithm is formally justified and it is shown that, in spite of its stochastic nature, a quantity can still be defined that remains constant during the evolution. In numerical applications this quantity can be used to measure the accuracy of the sampling. The authors illustrate the properties of this new method on Lennard-Jones and TIP4P water models in the solid and liquid phases. Its performance is excellent and largely independent of the thermostat parameter also with regard to the dynamic properties.;,citation_author=Giovanni Bussi;,citation_author=Davide Donadio;,citation_author=Michele Parrinello;,citation_publication_date=2007-01;,citation_cover_date=2007-01;,citation_year=2007;,citation_issue=1;,citation_doi=10.1063/1.2408420;,citation_issn=0021-9606;,citation_volume=126;,citation_journal_title=The Journal of Chemical Physics;">
+<meta name="citation_reference" content="citation_title=Pressure control using stochastic cell rescaling;,citation_abstract=Molecular dynamics simulations require barostats to be performed at a constant pressure. The usual recipe is to employ the Berendsen barostat first, which displays a first-order volume relaxation efficient in equilibration but results in incorrect volume fluctuations, followed by a second-order or a Monte Carlo barostat for production runs. In this paper, we introduce stochastic cell rescaling, a first-order barostat that samples the correct volume fluctuations by including a suitable noise term. The algorithm is shown to report volume fluctuations compatible with the isobaric ensemble and its anisotropic variant is tested on a membrane simulation. Stochastic cell rescaling can be straightforwardly implemented in the existing codes and can be used effectively in both equilibration and production phases.;,citation_author=Mattia Bernetti;,citation_author=Giovanni Bussi;,citation_publication_date=2020-09;,citation_cover_date=2020-09;,citation_year=2020;,citation_fulltext_html_url=https://doi.org/10.1063/5.0020514;,citation_issue=11;,citation_doi=10.1063/5.0020514;,citation_issn=0021-9606;,citation_volume=153;,citation_journal_title=The Journal of Chemical Physics;">
+<meta name="citation_reference" content="citation_title=Gmx_MMPBSA: A New Tool to Perform End-State Free Energy Calculations with GROMACS  Journal of Chemical Theory and Computation;,citation_author=Mario S. Tresanco-Valdés;,citation_author=Mario E. Tresanco-Valdés;,citation_author=Pedro A. Valiente;,citation_author=Ernesto Moreno;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_fulltext_html_url=https://pubs.acs.org/doi/10.1021/acs.jctc.1c00645;,citation_issue=10;,citation_doi=10.1021/acs.jctc.1c00645;,citation_volume=17;">
+<meta name="citation_reference" content="citation_title=End-Point Binding Free Energy Calculation with MM/PBSA and MM/GBSA: Strategies and Applications in Drug Design;,citation_abstract=Molecular mechanics Poisson–Boltzmann surface area (MM/PBSA) and molecular mechanics generalized Born surface area (MM/GBSA) are arguably very popular methods for binding free energy prediction since they are more accurate than most scoring functions of molecular docking and less computationally demanding than alchemical free energy methods. MM/PBSA and MM/GBSA have been widely used in biomolecular studies such as protein folding, protein–ligand binding, protein–protein interaction, etc. In this review, methods to adjust the polar solvation energy and to improve the performance of MM/PBSA and MM/GBSA calculations are reviewed and discussed. The latest applications of MM/GBSA and MM/PBSA in drug design are also presented. This review intends to provide readers with guidance for practically applying MM/PBSA and MM/GBSA in drug design and related research fields.;,citation_author=Ercheng Wang;,citation_author=Huiyong Sun;,citation_author=Junmei Wang;,citation_author=Zhe Wang;,citation_author=Hui Liu;,citation_author=John Z. H. Zhang;,citation_author=Tingjun Hou;,citation_publication_date=2019-08;,citation_cover_date=2019-08;,citation_year=2019;,citation_fulltext_html_url=https://doi.org/10.1021/acs.chemrev.9b00055;,citation_issue=16;,citation_doi=10.1021/acs.chemrev.9b00055;,citation_issn=0009-2665;,citation_volume=119;,citation_journal_title=Chemical Reviews;,citation_publisher=American Chemical Society;">
+<meta name="citation_reference" content="citation_title=CHARMM-GUI PDB Reader and Manipulator: Covalent Ligand Modeling and Simulation;,citation_abstract=Molecular modeling and simulation serve an important role in exploring biological functions of proteins at the molecular level, which is complementary to experiments. CHARMM-GUI (https://www.charmm-gui.org) is a web-based graphical user interface that generates complex molecular simulation systems and input files, and we have been continuously developing and expanding its functionalities to facilitate various complex molecular modeling and make molecular dynamics simulations more accessible to the scientific community. Currently, covalent drug discovery emerges as a popular and important field. Covalent drug forms a chemical bond with specific residues on the target protein, and it has advantages in potency for its prolonged inhibition effects. Even though there are higher demands in modeling PDB protein structures with various covalent ligand types, proper modeling of covalent ligands remains challenging. This work presents a new functionality in CHARMM-GUI PDB Reader &amp;amp;amp; Manipulator that can handle a diversity of ligand-amino acid linkage types, which is validated by a careful benchmark study using over 1,000 covalent ligand structures in RCSB PDB. We hope that this new functionality can boost the modeling and simulation study of covalent ligands.;,citation_author=Lingyang Kong;,citation_author=Sang-Jun Park;,citation_author=Wonpil Im;,citation_publication_date=2024-09;,citation_cover_date=2024-09;,citation_year=2024;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0022283624001499;,citation_issue=17;,citation_doi=10.1016/j.jmb.2024.168554;,citation_issn=0022-2836;,citation_volume=436;,citation_journal_title=Journal of Molecular Biology;,citation_series_title=Computation Resources for Molecular Biology;">
+<meta name="citation_reference" content="citation_title=Weak Cation Selectivity in HCN Channels Results From K+-Mediated Release of Na+ From Selectivity Filter Binding Sites  Function  American Physiological Society;,citation_abstract=Abstract Hyperpolarization-activated cyclic nucleotide-gated (HCN) channels generate the pacemaker current which plays an important role in the timing of various biological processes like the heart beat. We used umbrella sampling to explore the potential of mean force for the conduction of potassium and sodium through the open HCN4 pore. Our data explain distinct functional features like low unitary conductance and weak selectivity as a result of high energetic barriers inside the selectivity filter of this channel. They exceed the 3-5&nbsp;kJ/mol threshold which is presumed as maximal barrier for diffusion-limited conductance. Furthermore, simulations provide a thermodynamic explanation for the weak cation selectivity of HCN channels that contain only two ion binding sites in the selectivity filter (SF). We find that sodium ions bind more strongly to the SF than potassium and are easier released by binding of potassium than of another sodium. Hence ion transport and selectivity in HCN channels is not determined by the same mechanism as in potassium-selective channels; it rather relies on sodium as a weak blocker that can only be released by potassium.;,citation_author=Bauer Daniel;,citation_author=Wissmann Jan;,citation_author=Moroni Anna;,citation_author=Thiel Gerhard;,citation_author=Hamacher Kay;,citation_fulltext_html_url=https://journals.physiology.org/doi/10.1093/function/zqac019;,citation_issue=3;,citation_doi=10.1093/function/zqac019;,citation_volume=3;,citation_journal_title=Function;">
+<meta name="citation_reference" content="citation_title=GROMACS 2025.2 Manual;,citation_abstract=Full documentation for the GROMACS 2025.2 release version.;,citation_author=Mark Abraham;,citation_author=Andrey Alekseenko;,citation_author=Brian Andrews;,citation_author=Vladimir Basov;,citation_author=Paul Bauer;,citation_author=Hugh Bird;,citation_author=Eliane Briand;,citation_author=Ania Brown;,citation_author=Mahesh Doijade;,citation_author=Giacomo Fiorin;,citation_author=Stefan Fleischmann;,citation_author=Sergey Gorelov;,citation_author=Gilles Gouaillardet;,citation_author=Alan Gray;,citation_author=M. Eric Irrgang;,citation_author=Farzaneh Jalalypour;,citation_author=Petter Johansson;,citation_author=Carsten Kutzner;,citation_author=Grzegorz Łazarski;,citation_author=Justin A. Lemkul;,citation_author=Magnus Lundborg;,citation_author=Pascal Merz;,citation_author=Vedran Miletić;,citation_author=Dmitry Morozov;,citation_author=Lukas Müllender;,citation_author=Julien Nabet;,citation_author=Szilárd Páll;,citation_author=Andrea Pasquadibisceglie;,citation_author=Michele Pellegrino;,citation_author=Nicola Piasentin;,citation_author=Daniele Rapetti;,citation_author=Muhammad Umair Sadiq;,citation_author=Hubert Santuz;,citation_author=Roland Schulz;,citation_author=Michael Shirts;,citation_author=Tatiana Shugaeva;,citation_author=Alexey Shvetsov;,citation_author=Philip Turner;,citation_author=Alessandra Villa;,citation_author=Sebastian Wingbermühle;,citation_author=Berk Hess;,citation_author=Erik Lindahl;,citation_publication_date=2025-05;,citation_cover_date=2025-05;,citation_year=2025;,citation_fulltext_html_url=https://zenodo.org/records/15387070;,citation_doi=10.5281/zenodo.15387070;,citation_publisher=Zenodo;">
+<meta name="citation_reference" content="citation_title=CHARMM TIP3P Water Model Suppresses Peptide Folding by Solvating the Unfolded State;,citation_abstract=The accuracy of molecular dynamics simulations depends on the underlying force field, defined by the form and parametrization of the interparticle potential functions and the water model. The treatment of the solvent is crucial in molecular dynamics force fields, as hydrophobic interactions and hydrogen bonding are important molecular forces. The widely used CHARMM force field was originally parametrized using a modified version of the TIP3P water model (mTIP3P), including Lennard-Jones interactions between hydrogens and oxygens. The latest version, CHARMM36, was optimized using the standard TIP3P water model (sTIP3P) for proteins, while mTIP3P is still being used for lipids. Our replica exchange molecular dynamics simulations on dynamic peptides show that the CHARMM36 force field with mTIP3P water yields less realistic folding than with sTIP3P water. Analysis of the dimensions and hydrogen bonding of the unfolded state reveals that the peptides are more solvated and extended in mTIP3P, due to a higher solvation energy of the peptide in this water model. We recommend using CHARMM36 with sTIP3P when simulating peptides, folded proteins, and natively unfolded proteins, but combinations of proteins with lipids would require a reparametrization to make their water models compatible.;,citation_author=Sander Boonstra;,citation_author=Patrick R. Onck;,citation_author=Erik Giessen;,citation_publication_date=2016-04;,citation_cover_date=2016-04;,citation_year=2016;,citation_issue=15;,citation_doi=10.1021/acs.jpcb.6b01316;,citation_issn=1520-5207;,citation_volume=120;,citation_journal_title=The Journal of Physical Chemistry. B;">
+<meta name="citation_reference" content="citation_title=ff19SB: Amino-Acid-Specific Protein Backbone Parameters Trained against Quantum Mechanics Energy Surfaces in Solution;,citation_abstract=Molecular dynamics (MD) simulations have become increasingly popular in studying the motions and functions of biomolecules. The accuracy of the simulation, however, is highly determined by the molecular mechanics (MM) force field (FF), a set of functions with adjustable parameters to compute the potential energies from atomic positions. However, the overall quality of the FF, such as our previously published ff99SB and ff14SB, can be limited by assumptions that were made years ago. In the updated model presented here (ff19SB), we have significantly improved the backbone profiles for all 20 amino acids. We fit coupled φ/ψ parameters using 2D φ/ψ conformational scans for multiple amino acids, using as reference data the entire 2D quantum mechanics (QM) energy surface. We address the polarization inconsistency during dihedral parameter fitting by using both QM and MM in aqueous solution. Finally, we examine possible dependency of the backbone fitting on side chain rotamer. To extensively validate ff19SB parameters, and to compare to results using other Amber models, we have performed a total of ∼5 ms MD simulations in explicit solvent. Our results show that after amino-acid-specific training against QM data with solvent polarization, ff19SB not only reproduces the differences in amino-acid-specific Protein Data Bank (PDB) Ramachandran maps better but also shows significantly improved capability to differentiate amino-acid-dependent properties such as helical propensities. We also conclude that an inherent underestimation of helicity is present in ff14SB, which is (inexactly) compensated for by an increase in helical content driven by the TIP3P bias toward overly compact structures. In summary, ff19SB, when combined with a more accurate water model such as OPC, should have better predictive power for modeling sequence-specific behavior, protein mutations, and also rational protein design. Of the explicit water models tested here, we recommend use of OPC with ff19SB.;,citation_author=Chuan Tian;,citation_author=Koushik Kasavajhala;,citation_author=Kellon A. A. Belfon;,citation_author=Lauren Raguette;,citation_author=He Huang;,citation_author=Angela N. Migues;,citation_author=John Bickel;,citation_author=Yuzhang Wang;,citation_author=Jorge Pincay;,citation_author=Qin Wu;,citation_author=Carlos Simmerling;,citation_publication_date=2020-01;,citation_cover_date=2020-01;,citation_year=2020;,citation_fulltext_html_url=https://doi.org/10.1021/acs.jctc.9b00591;,citation_issue=1;,citation_doi=10.1021/acs.jctc.9b00591;,citation_issn=1549-9618;,citation_volume=16;,citation_journal_title=Journal of Chemical Theory and Computation;,citation_publisher=American Chemical Society;">
+<meta name="citation_reference" content="citation_title=Long-Time-Step Molecular Dynamics through Hydrogen Mass Repartitioning;,citation_abstract=Previous studies have shown that the method of hydrogen mass repartitioning (HMR) is a potentially useful tool for accelerating molecular dynamics (MD) simulations. By repartitioning the mass of heavy atoms into the bonded hydrogen atoms, it is possible to slow the highest-frequency motions of the macromolecule under study, thus allowing the time step of the simulation to be increased by up to a factor of 2. In this communication, we investigate further how this mass repartitioning allows the simulation time step to be increased in a stable fashion without significantly increasing discretization error. To this end, we ran a set of simulations with different time steps and mass distributions on a three-residue peptide to get a comprehensive view of the effect of mass repartitioning and time step increase on a system whose accessible phase space is fully explored in a relatively short amount of time. We next studied a 129-residue protein, hen egg white lysozyme (HEWL), to verify that the observed behavior extends to a larger, more-realistic, system. Results for the protein include structural comparisons from MD trajectories, as well as comparisons of pKa calculations via constant-pH MD. We also calculated a potential of mean force (PMF) of a dihedral rotation for the MTS [(1-oxyl-2,2,5,5-tetramethyl-pyrroline-3-methyl)methanethiosulfonate] spin label via umbrella sampling with a set of regular MD trajectories, as well as a set of mass-repartitioned trajectories with a time step of 4 fs. Since no significant difference in kinetics or thermodynamics is observed by the use of fast HMR trajectories, further evidence is provided that long-time-step HMR MD simulations are a viable tool for accelerating MD simulations for molecules of biochemical interest.;,citation_author=Chad W. Hopkins;,citation_author=Scott Le Grand;,citation_author=Ross C. Walker;,citation_author=Adrian E. Roitberg;,citation_publication_date=2015-04;,citation_cover_date=2015-04;,citation_year=2015;,citation_fulltext_html_url=https://doi.org/10.1021/ct5010406;,citation_issue=4;,citation_doi=10.1021/ct5010406;,citation_issn=1549-9618;,citation_volume=11;,citation_journal_title=Journal of Chemical Theory and Computation;,citation_publisher=American Chemical Society;">
+<meta name="citation_reference" content="citation_title=Empirical force fields for biological macromolecules: Overview and issues;,citation_abstract=Empirical force field-based studies of biological macromolecules are becoming a common tool for investigating their structure-activity relationships at an atomic level of detail. Such studies facilitate interpretation of experimental data and allow for information not readily accessible to experimental methods to be obtained. A large part of the success of empirical force field-based methods is the quality of the force fields combined with the algorithmic advances that allow for more accurate reproduction of experimental observables. Presented is an overview of the issues associated with the development and application of empirical force fields to biomolecular systems. This is followed by a summary of the force fields commonly applied to the different classes of biomolecules; proteins, nucleic acids, lipids, and carbohydrates. In addition, issues associated with computational studies on &amp;amp;amp;quot;heterogeneous&amp;quot; biomolecular systems and the transferability of force fields to a wide range of organic molecules of pharmacological interest are discussed.;,citation_author=Alexander D. Mackerell;,citation_publication_date=2004-10;,citation_cover_date=2004-10;,citation_year=2004;,citation_issue=13;,citation_doi=10.1002/jcc.20082;,citation_issn=0192-8651;,citation_volume=25;,citation_journal_title=Journal of Computational Chemistry;">
+<meta name="citation_reference" content="citation_title=CHARMM General Force Field (CGenFF): A force field for drug-like molecules compatible with the CHARMM all-atom additive biological force fields;,citation_abstract=The widely used CHARMM additive all-atom force field includes parameters for proteins, nucleic acids, lipids and carbohydrates. In the present paper an extension of the CHARMM force field to drug-like molecules is presented. The resulting CHARMM General Force Field (CGenFF) covers a wide range of chemical groups present in biomolecules and drug-like molecules, including a large number of heterocyclic scaffolds. The parametrization philosophy behind the force field focuses on quality at the expense of transferability, with the implementation concentrating on an extensible force field. Statistics related to the quality of the parametrization with a focus on experimental validation are presented. Additionally, the parametrization procedure, described fully in the present paper in the context of the model systems, pyrrolidine, and 3-phenoxymethylpyrrolidine will allow users to readily extend the force field to chemical groups that are not explicitly covered in the force field as well as add functional groups to and link together molecules already available in the force field. CGenFF thus makes it possible to perform “all-CHARMM” simulations on drug-target interactions thereby extending the utility of CHARMM force fields to medicinally relevant systems.;,citation_author=K. Vanommeslaeghe;,citation_author=E. Hatcher;,citation_author=C. Acharya;,citation_author=S. Kundu;,citation_author=S. Zhong;,citation_author=J. Shim;,citation_author=E. Darian;,citation_author=O. Guvench;,citation_author=P. Lopes;,citation_author=I. Vorobyov;,citation_author=A. D. MacKerell;,citation_publication_date=2010-03;,citation_cover_date=2010-03;,citation_year=2010;,citation_fulltext_html_url=https://pmc.ncbi.nlm.nih.gov/articles/PMC2888302/;,citation_issue=4;,citation_doi=10.1002/jcc.21367;,citation_issn=0192-8651;,citation_volume=31;,citation_journal_title=Journal of computational chemistry;">
+<meta name="citation_reference" content="citation_title=MDAnalysis: A toolkit for the analysis of molecular dynamics simulations;,citation_abstract=MDAnalysis is an object-oriented library for structural and temporal analysis of molecular dynamics (MD) simulation trajectories and individual protein structures. It is written in the Python language with some performance-critical code in C. It uses the powerful NumPy package to expose trajectory data as fast and efficient NumPy arrays. It has been tested on systems of millions of particles. Many common file formats of simulation packages including CHARMM, Gromacs, Amber, and NAMD and the Protein Data Bank format can be read and written. Atoms can be selected with a syntax similar to CHARMM’s powerful selection commands. MDAnalysis enables both novice and experienced programmers to rapidly write their own analytical tools and access data stored in trajectories in an easily accessible manner that facilitates interactive explorative analysis. MDAnalysis has been tested on and works for most Unix-based platforms such as Linux and Mac OS X. It is freely available under the GNU General Public License from http://mdanalysis.googlecode.com. © 2011 Wiley Periodicals, Inc. J Comput Chem 2011;,citation_author=Naveen Michaud-Agrawal;,citation_author=Elizabeth J. Denning;,citation_author=Thomas B. Woolf;,citation_author=Oliver Beckstein;,citation_publication_date=2011;,citation_cover_date=2011;,citation_year=2011;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.21787;,citation_issue=10;,citation_doi=10.1002/jcc.21787;,citation_issn=1096-987X;,citation_volume=32;,citation_journal_title=Journal of Computational Chemistry;">
+<meta name="citation_reference" content="citation_title=MDAnalysis: A Python Package for the Rapid Analysis of Molecular Dynamics Simulations;,citation_abstract=MDAnalysis (http://mdanalysis.org) is a library for structural and temporal analysis of molecular dynamics (MD) simulation trajectories and individual protein structures. MD simulations of biological molecules have become an important tool to elucidate the relationship between molecular structure and physiological function.;,citation_author=Richard J. Gowers;,citation_author=Max Linke;,citation_author=Jonathan Barnoud;,citation_author=Tyler J. E. Reddy;,citation_author=Manuel N. Melo;,citation_author=Sean L. Seyler;,citation_author=Jan Domański;,citation_author=David L. Dotson;,citation_author=Sébastien Buchoux;,citation_author=Ian M. Kenney;,citation_author=Oliver Beckstein;,citation_publication_date=2016-06;,citation_cover_date=2016-06;,citation_year=2016;,citation_fulltext_html_url=https://proceedings.scipy.org/articles/Majora-629e541a-00e;,citation_doi=10.25080/Majora-629e541a-00e;,citation_journal_title=SciPy 2016;">
+<meta name="citation_reference" content="citation_title=Assessment of GAFF2 and OPLS-AA General Force Fields in Combination with the Water Models TIP3P, SPCE, and OPC3 for the Solvation Free Energy of Druglike Organic Molecules;,citation_abstract=Molecular dynamics simulations have been performed to compute the solvation free energy and the octanol/water partition coefficients for a challenging set of selected organic molecules, characterized by the simultaneous presence of functional groups coarsely spanning a large portion of the chemical space in druglike compounds and, in many cases, by a complex conformational landscape (2-propoxyethanol, acetylsalicylic acid, cyclohexanamine, dialifor, ketoprofen, nitralin, profluralin, terbacil). OPLS-AA and GAFF2 parametrizations of the organic molecules and of 1-octanol have been done via the Web-based automatic parameter generators, LigParGen [Dodda et al. Nucl. Acids Res. 2017, 121, 3864] and PrimaDORAC [Procacci J. Chem. Inf. Model. 2017, 57, 1240], respectively. For the water solvent, three popular three-point site models, TIP3P, SPCE, and OPC3, were tested. Solvation free energies in water and 1-octanol are evaluated using a recently developed nonequilibrium alchemical technology [Procacci et al. J. Chem. Theory Comput. 2014, 10, 2813]. Extensive and accurate simulations, including all possible combinations of organic molecule, solvent, and solvent model, are allowed to assess the accuracy with regard to solvation free energies of the latest release of two widespread force fields, OPLS and GAFF. The collected data are relevant in the evaluation of the predictive power of these classical force fields (and of the related support software for automated parametrization) with regard to binding free energies in a drug-receptor system for industrial applications.;,citation_author=Dario Vassetti;,citation_author=Marco Pagliai;,citation_author=Piero Procacci;,citation_publication_date=2019-03;,citation_cover_date=2019-03;,citation_year=2019;,citation_fulltext_html_url=https://doi.org/10.1021/acs.jctc.8b01039;,citation_issue=3;,citation_doi=10.1021/acs.jctc.8b01039;,citation_issn=1549-9618;,citation_volume=15;,citation_journal_title=Journal of Chemical Theory and Computation;,citation_publisher=American Chemical Society;">
+<meta name="citation_reference" content="citation_title=GROMACS 2025.2;,citation_abstract=GROMACS&nbsp;is a free, open-source and high-performance software suite for molecular dynamics simulation and analysis.;,citation_author=Mark Abraham;,citation_author=Andrey Alekseenko;,citation_author=Brian Andrews;,citation_author=Vladimir Basov;,citation_author=Paul Bauer;,citation_author=Hugh Bird;,citation_author=Eliane Briand;,citation_author=Ania Brown;,citation_author=Mahesh Doijade;,citation_author=Giacomo Fiorin;,citation_author=Stefan Fleischmann;,citation_author=Sergey Gorelov;,citation_author=Gilles Gouaillardet;,citation_author=Alan Gray;,citation_author=M. Eric Irrgang;,citation_author=Farzaneh Jalalypour;,citation_author=Petter Johansson;,citation_author=Carsten Kutzner;,citation_author=Grzegorz Łazarski;,citation_author=Justin A. Lemkul;,citation_author=Magnus Lundborg;,citation_author=Pascal Merz;,citation_author=Vedran Miletić;,citation_author=Dmitry Morozov;,citation_author=Lukas Müllender;,citation_author=Julien Nabet;,citation_author=Szilárd Páll;,citation_author=Andrea Pasquadibisceglie;,citation_author=Michele Pellegrino;,citation_author=Nicola Piasentin;,citation_author=Daniele Rapetti;,citation_author=Muhammad Umair Sadiq;,citation_author=Hubert Santuz;,citation_author=Roland Schulz;,citation_author=Michael Shirts;,citation_author=Tatiana Shugaeva;,citation_author=Alexey Shvetsov;,citation_author=Philip Turner;,citation_author=Alessandra Villa;,citation_author=Sebastian Wingbermühle;,citation_author=Berk Hess;,citation_author=Erik Lindahl;,citation_publication_date=2025-08-26;,citation_cover_date=2025-08-26;,citation_year=2025;,citation_fulltext_html_url=https://zenodo.org/records/16945375;,citation_doi=10.5281/zenodo.16945375;,citation_publisher=Zenodo;">
+<meta name="citation_reference" content="citation_title=Asparagine and glutamine: Using hydrogen atom contacts in the choice of side-chain amide orientation 1 1Edited by j. thornton;,citation_author=J.Michael Word;,citation_author=Simon C. Lovell;,citation_author=Jane S. Richardson;,citation_author=David C. Richardson;,citation_publication_date=1999-01;,citation_cover_date=1999-01;,citation_year=1999;,citation_fulltext_html_url=http://dx.doi.org/10.1006/jmbi.1998.2401;,citation_issue=4;,citation_doi=10.1006/jmbi.1998.2401;,citation_volume=285;,citation_language=en;,citation_journal_title=Journal of Molecular Biology;">
+<meta name="citation_reference" content="citation_title=Rlabduke/reduce;,citation_author=Richardson Laboratory;,citation_publication_date=2026-07-04;,citation_cover_date=2026-07-04;,citation_year=2026;,citation_fulltext_html_url=https://github.com/rlabduke/reduce;">
+<meta name="citation_reference" content="citation_title=A Novel Inhibitor against the Bromodomain Protein 1 of the Malaria Pathogen &amp;amp;amp;lt;i&amp;gt;Plasmodium Falciparum&amp;lt;/i&amp;gt;;,citation_abstract=The rise of drug resistances in malaria necessitates the exploration of novel therapeutic strategies. Targeting epigenetic pathways could open new, promising treatment avenues. In this study, the focus is on the essential Bromodomain protein 1 ( Pf BDP1) of the malaria pathogen Plasmodium falciparum. Utilizing the pan-selective bromodomain inhibitor MPM6, a potent initial hit is identified and it is subsequently developed into a nanomolar binder. Through a combination of virtual docking, isothermal titration calorimetry, and X-ray crystallography, the molecular interactions of the new inhibitors with the bromodomain (BRD) of the protein ( Pf BDP1-BRD) are elucidated. The findings include the first co-crystallized inhibitors with the structures of Pf BRD1-BRD as well as the bromodomain of the close homologous protein of Plasmodium vivax ( Pv BDP1-BRD). The structures provide new insights into their binding mechanisms. Further validation using conditional knockdown of Pf BDP1 in P. falciparum demonstrates parasite sensitivity to the inhibitor, underscoring its potential in a targeted therapeutic approach against malaria.;,citation_author=Marius Amann;,citation_author=Robin Warstat;,citation_author=Kay Kristin Rechten;,citation_author=Philip Theuer;,citation_author=Magdalena Schustereder;,citation_author=Sophie Clavey;,citation_author=Bernhard Breit;,citation_author=Oliver Einsle;,citation_author=Martin Hügle;,citation_author=Michaela Petter;,citation_author=Stefan Günther;,citation_publication_date=2025-06;,citation_cover_date=2025-06;,citation_year=2025;,citation_issue=11;,citation_doi=10.1002/cmdc.202500024;,citation_issn=1860-7179, 1860-7187;,citation_volume=20;,citation_language=en-US;,citation_journal_title=ChemMedChem;,citation_publisher=John Wiley &amp;amp; Sons, Ltd;">
+<meta name="citation_reference" content="citation_title=A Plasmodium Falciparum Bromodomain Protein Regulates Invasion Gene Expression;,citation_abstract=During red-blood-cell-stage infection of Plasmodium falciparum, the parasite undergoes repeated rounds of replication, egress, and invasion. Erythrocyte invasion involves specific interactions between host cell receptors and parasite ligands and coordinated expression of genes specific to this step of the life cycle. We show that a parasite-specific bromodomain protein, PfBDP1, binds to chromatin at transcriptional start sites of invasion-related genes and directly controls their expression. Conditional PfBDP1 knockdown causes a dramatic defect in parasite invasion and growth and results in transcriptional downregulation of multiple invasion-related genes at a time point critical for invasion. Conversely, PfBDP1 overexpression enhances expression of these same invasion-related genes. PfBDP1 binds to acetylated histone H3 and a second bromodomain protein, PfBDP2, suggesting a potential mechanism for gene recognition and control. Collectively, these findings show that PfBDP1 critically coordinates expression of invasion genes and indicate that targeting PfBDP1 could be an invaluable tool in malaria eradication.;,citation_author=Gabrielle A. Josling;,citation_author=Michaela Petter;,citation_author=Sophie C. Oehring;,citation_author=Archna P. Gupta;,citation_author=Olivier Dietz;,citation_author=Danny W. Wilson;,citation_author=Thomas Schubert;,citation_author=Gernot Längst;,citation_author=Paul R. Gilson;,citation_author=Brendan S. Crabb;,citation_author=Suzette Moes;,citation_author=Paul Jenoe;,citation_author=Shu Wei Lim;,citation_author=Graham V. Brown;,citation_author=Zbynek Bozdech;,citation_author=Till S. Voss;,citation_author=Michael F. Duffy;,citation_publication_date=2015-06;,citation_cover_date=2015-06;,citation_year=2015;,citation_issue=6;,citation_doi=10.1016/j.chom.2015.05.009;,citation_issn=1931-3128, 1934-6069;,citation_pmid=26067602;,citation_volume=17;,citation_language=en-US;,citation_journal_title=Cell Host &amp;amp;amp; Microbe;,citation_publisher=Elsevier;">
+<meta name="citation_reference" content="citation_title=Crystal structure of the plasmodium falciparum bromodomain PfBDP1 in complex with MPM2;,citation_author=M. Amann;,citation_author=M. Huegle;,citation_author=O. Einsle;,citation_author=S. Guenther;,citation_publication_date=2024-11-21;,citation_cover_date=2024-11-21;,citation_year=2024;,citation_fulltext_html_url=http://dx.doi.org/10.2210/pdb9hhc/pdb;,citation_doi=10.2210/pdb9hhc/pdb;,citation_publisher=Worldwide Protein Data Bank;">
+<meta name="citation_reference" content="citation_title=A plasmodium falciparum bromodomain protein regulates invasion gene expression;,citation_author=Gabrielle&nbsp;A. Josling;,citation_author=Michaela Petter;,citation_author=Sophie&nbsp;C. Oehring;,citation_author=Archna&nbsp;P. Gupta;,citation_author=Olivier Dietz;,citation_author=Danny&nbsp;W. Wilson;,citation_author=Thomas Schubert;,citation_author=Gernot Längst;,citation_author=Paul&nbsp;R. Gilson;,citation_author=Brendan&nbsp;S. Crabb;,citation_author=Suzette Moes;,citation_author=Paul Jenoe;,citation_author=Shu&nbsp;Wei Lim;,citation_author=Graham&nbsp;V. Brown;,citation_author=Zbynek Bozdech;,citation_author=Till&nbsp;S. Voss;,citation_author=Michael&nbsp;F. Duffy;,citation_publication_date=2015-06;,citation_cover_date=2015-06;,citation_year=2015;,citation_fulltext_html_url=http://dx.doi.org/10.1016/j.chom.2015.05.009;,citation_issue=6;,citation_doi=10.1016/j.chom.2015.05.009;,citation_volume=17;,citation_language=en;,citation_journal_title=Cell Host &amp;amp;amp; Microbe;">
+<meta name="citation_reference" content="citation_title=GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers;,citation_abstract=GROMACS is one of the most widely used open-source and free software codes in chemistry, used primarily for dynamical simulations of biomolecules. It provides a rich set of calculation types, preparation and analysis tools. Several advanced techniques for free-energy calculations are supported. In version 5, it reaches new performance heights, through several new and enhanced parallelization algorithms. These work on every level; SIMD registers inside cores, multithreading, heterogeneous CPU–GPU acceleration, state-of-the-art 3D domain decomposition, and ensemble-level parallelization through built-in replica exchange and the separate Copernicus framework. The latest best-in-class compressed trajectory storage format is supported.;,citation_author=Mark James Abraham;,citation_author=Teemu Murtola;,citation_author=Roland Schulz;,citation_author=Szilárd Páll;,citation_author=Jeremy C. Smith;,citation_author=Berk Hess;,citation_author=Erik Lindahl;,citation_publication_date=2015-09;,citation_cover_date=2015-09;,citation_year=2015;,citation_doi=10.1016/j.softx.2015.06.001;,citation_issn=23527110;,citation_volume=1–2;,citation_language=en-US;,citation_journal_title=SoftwareX;">
+<meta name="citation_reference" content="citation_title=CHARMM36 all-atom additive protein force field: Validation based on comparison to NMR data;,citation_author=Jing Huang;,citation_author=Alexander D. MacKerell;,citation_publication_date=2013-09;,citation_cover_date=2013-09;,citation_year=2013;,citation_issue=25;,citation_doi=10.1002/jcc.23354;,citation_issn=01928651;,citation_volume=34;,citation_language=en-US;,citation_journal_title=Journal of Computational Chemistry;">
+<meta name="citation_reference" content="citation_title=SwissParam: A fast force field generation tool for small organic molecules - Zoete - 2011 - Journal of Computational Chemistry - Wiley Online Library;,citation_publisher=https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.21816;">
+<meta name="citation_reference" content="citation_title=Canonical sampling through velocity rescaling;,citation_abstract=The authors present a new molecular dynamics algorithm for sampling the canonical distribution. In this approach the velocities of all the particles are rescaled by a properly chosen random factor. The algorithm is formally justified and it is shown that, in spite of its stochastic nature, a quantity can still be defined that remains constant during the evolution. In numerical applications this quantity can be used to measure the accuracy of the sampling. The authors illustrate the properties of this new method on Lennard-Jones and TIP4P water models in the solid and liquid phases. Its performance is excellent and largely independent of the thermostat parameter also with regard to the dynamic properties.;,citation_author=Giovanni Bussi;,citation_author=Davide Donadio;,citation_author=Michele Parrinello;,citation_publication_date=2007-01;,citation_cover_date=2007-01;,citation_year=2007;,citation_issue=1;,citation_doi=10.1063/1.2408420;,citation_issn=0021-9606;,citation_volume=126;,citation_journal_title=The Journal of Chemical Physics;">
+<meta name="citation_reference" content="citation_title=Polymorphic transitions in single crystals: A new molecular dynamics method;,citation_abstract=A new Lagrangian formulation is introduced. It can be used to make molecular dynamics (MD) calculations on systems under the most general, externally applied, conditions of stress. In this formulation the MD cell shape and size can change according to dynamical equations given by this Lagrangian. This new MD technique is well suited to the study of structural transformations in solids under external stress and at finite temperature. As an example of the use of this technique we show how a single crystal of Ni behaves under uniform uniaxial compressive and tensile loads. This work confirms some of the results of static (i.e., zero temperature) calculations reported in the literature. We also show that some results regarding the stress-strain relation obtained by static calculations are invalid at finite temperature. We find that, under compressive loading, our model of Ni shows a bifurcation in its stress-strain relation; this bifurcation provides a link in configuration space between cubic and hexagonal close packing. It is suggested that such a transformation could perhaps be observed experimentally under extreme conditions of shock.;,citation_author=M. Parrinello;,citation_author=A. Rahman;,citation_publication_date=1981-12;,citation_cover_date=1981-12;,citation_year=1981;,citation_issue=12;,citation_doi=10.1063/1.328693;,citation_issn=0021-8979;,citation_volume=52;,citation_journal_title=Journal of Applied Physics;">
+<meta name="citation_reference" content="citation_title=Gmx_MMPBSA: A New Tool to Perform End-State Free Energy Calculations with GROMACS;,citation_abstract=Molecular mechanics/Poisson-Boltzmann (Generalized-Born) surface area is one of the most popular methods to estimate binding free energies. This method has been proven to balance accuracy and computational efficiency, especially when dealing with large systems. As a result of its popularity, several programs have been developed for performing MM/PB(GB)SA calculations within the GROMACS community. These programs, however, present several limitations. Here we present gmx_MMPBSA, a new tool to perform end-state free energy calculations from GROMACS molecular dynamics trajectories. gmx_MMPBSA provides the user with several options, including binding free energy calculations with different solvation models (PB, GB, or 3D-RISM), stability calculations, computational alanine scanning, entropy corrections, and binding free energy decomposition. Noteworthy, several promising methodologies to calculate relative binding free energies such as alanine scanning with variable dielectric constant and interaction entropy have also been implemented in gmx_MMPBSA. Two additional tools-gmx_MMPBSA_test and gmx_MMPBSA_ana-have been integrated within gmx_MMPBSA to improve its usability. Multiple illustrating examples can be accessed through gmx_MMPBSA_test, while gmx_MMPBSA_ana provides fast, easy, and efficient access to different graphics plotted from gmx_MMPBSA output files. The latest version (v1.4.3, 26/05/2021) is available free of charge (documentation, test files, and tutorials included) at https://github.com/Valdes-Tresanco-MS/gmx_MMPBSA.;,citation_author=Mario Valdés-Tresanco;,citation_author=Mario Valdés-Tresanco;,citation_author=Pedro Valiente;,citation_author=Ernesto Moreno Frias;,citation_publication_date=2021-09;,citation_cover_date=2021-09;,citation_year=2021;,citation_doi=10.1021/acs.jctc.1c00645;,citation_volume=17;,citation_journal_title=Journal of Chemical Theory and Computation;">
+<meta name="citation_reference" content="citation_title=LINCS: A linear constraint solver for molecular simulations;,citation_abstract=In this article, we present a new LINear Constraint Solver (LINCS) for molecular simulations with bond constraints. The algorithm is inherently stable, as the constraints themselves are reset instead of derivatives of the constraints, thereby eliminating drift. Although the derivation of the algorithm is presented in terms of matrices, no matrix matrix multiplications are needed and only the nonzero matrix elements have to be stored, making the method useful for very large molecules. At the same accuracy, the LINCS algorithm is three to four times faster than the SHAKE algorithm. Parallelization of the algorithm is straightforward. © 1997 John Wiley &amp;amp;amp; Sons, Inc. J Comput Chem 18: 1463–1472, 1997;,citation_author=Berk Hess;,citation_author=Henk Bekker;,citation_author=Herman J. C. Berendsen;,citation_author=Johannes G. E. M. Fraaije;,citation_publication_date=1997;,citation_cover_date=1997;,citation_year=1997;,citation_issue=12;,citation_doi=10.1002/(SICI)1096-987X(199709)18:12&amp;amp;lt;1463::AID-JCC4&amp;gt;3.0.CO;2-H;,citation_issn=1096-987X;,citation_volume=18;,citation_language=en-US;,citation_journal_title=Journal of Computational Chemistry;">
+<meta name="citation_reference" content="citation_title=Particle mesh Ewald: An N$\cdot$log(N) method for Ewald sums in large systems;,citation_abstract=An N$\cdot$log(N) method for evaluating electrostatic energies and forces of large periodic systems is presented. The method is based on interpolation of the reciprocal space Ewald sums and evaluation of the resulting convolutions using fast Fourier transforms. Timings and accuracies are presented for three large crystalline ionic systems.;,citation_author=Tom Darden;,citation_author=Darrin York;,citation_author=Lee Pedersen;,citation_publication_date=1993-06;,citation_cover_date=1993-06;,citation_year=1993;,citation_issue=12;,citation_doi=10.1063/1.464397;,citation_issn=0021-9606;,citation_volume=98;,citation_journal_title=The Journal of Chemical Physics;">
+<meta name="citation_reference" content="citation_title=ADMET-AI: A machine learning ADMET platform for evaluation of large-scale chemical libraries;,citation_abstract=The emergence of large chemical repositories and combinatorial chemical spaces, coupled with high-throughput docking and generative AI, have greatly expanded the chemical diversity of small molecules for drug discovery. Selecting compounds for experimental validation requires filtering these molecules based on favourable druglike properties, such as Absorption, Distribution, Metabolism, Excretion, and Toxicity (ADMET).We developed ADMET-AI, a machine learning platform that provides fast and accurate ADMET predictions both as a website and as a Python package. ADMET-AI has the highest average rank on the TDC ADMET Leaderboard, and it is currently the fastest web-based ADMET predictor, with a 45% reduction in time compared to the next fastest public ADMET web server. ADMET-AI can also be run locally with predictions for one million molecules taking just 3.1 h.The ADMET-AI platform is freely available both as a web server at admet.ai.greenstonebio.com and as an open-source Python package for local batch prediction at github.com/swansonk14/admet_ai (also archived on Zenodo at doi.org/10.5281/zenodo.10372930). All data and models are archived on Zenodo at doi.org/10.5281/zenodo.10372418.;,citation_author=Kyle Swanson;,citation_author=Parker Walther;,citation_author=Jeremy Leitz;,citation_author=Souhrid Mukherjee;,citation_author=Joseph C Wu;,citation_author=Rabindra V Shivnaraine;,citation_author=James Zou;,citation_publication_date=2024-07;,citation_cover_date=2024-07;,citation_year=2024;,citation_issue=7;,citation_doi=10.1093/bioinformatics/btae416;,citation_issn=1367-4811;,citation_volume=40;,citation_journal_title=Bioinformatics;">
+<meta name="citation_reference" content="citation_title=Chemico-pharmacological and computational evaluation of Artocarpus chaplasha; Comparative anthelmintic and cytotoxic potential between bark and seed;,citation_author=Famim Ahmed;,citation_author=Farjana Khatun;,citation_author=Le-Anh-Tuan Nguyen;,citation_author=Maliha Mohosina Rifa;,citation_author=Md. Akram Hossain;,citation_author=Sharmin Nur Toma;,citation_author=Sanjay Dutta;,citation_publication_date=2026-04;,citation_cover_date=2026-04;,citation_year=2026;,citation_doi=10.1016/j.vetpar.2026.110725;,citation_issn=03044017;,citation_volume=343;,citation_language=en-US;,citation_journal_title=Veterinary Parasitology;">
+<meta name="citation_reference" content="citation_title=Application of bioactive molecular networking to identify corneal-cytoprotective compounds from Dialium cochinchinense Pierre. leaves;,citation_abstract=Dry eye disease (DED) requires innovative therapeutic strategies targeting inflammation and oxidative stress. In this study, we demonstrate for the fi…;,citation_publication_date=2025-06;,citation_cover_date=2025-06;,citation_year=2025;,citation_doi=10.1016/j.cpb.2025.100489;,citation_issn=2214-6628;,citation_volume=42;,citation_language=en-US;,citation_journal_title=Current Plant Biology;,citation_publisher=Elsevier;">
+</head>
+
+<body class="quarto-light">
+
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Large-Scale Virtual Screening of Enamine 4.6 Millions compounds against Plasmodium Bromodomain PfBDP1</h1>
+          </div>
+
+    
+    <div class="quarto-title-meta-container">
+      <div class="quarto-title-meta-column-start">
+            <div class="quarto-title-meta-author">
+          <div class="quarto-title-meta-heading">Authors</div>
+          <div class="quarto-title-meta-heading">Affiliations</div>
+          
+                <div class="quarto-title-meta-contents">
+            <p class="author">Bakary N’tji Diallo <a href="mailto:diallobakary4@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-1741-2979" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        </p><p>Developing Excellence in Leadership and Genomics Training for Malaria Elimination and Antimicrobial Resistance Control in Africa (DELGEME Plus)</p>
+                      <p></p>
+                    <p class="affiliation">
+                        </p><p>Parasites and Microbes Research and Training Center (PMRTC), University of Science, Techniques and Technologies of Bamako, Bamako, Mali</p>
+                      <p></p>
+                  </div>
+                      <div class="quarto-title-meta-contents">
+            <p class="author"><a href="https://scholar.google.com/citations?user=5pSwJhgAAAAJ&amp;hl=en">Le Anh Tuan Nguyen</a> <a href="mailto:tuannguyen@lhu.edu.vn" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        Lac Hong University
+                      </p>
+                  </div>
+                      <div class="quarto-title-meta-contents">
+            <p class="author">Laurent Dembélé </p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        </p><p>Parasites and Microbes Research and Training Center (PMRTC), University of Science, Techniques and Technologies of Bamako, Bamako, Mali</p>
+                      <p></p>
+                  </div>
+                      <div class="quarto-title-meta-contents">
+            <p class="author">Fidèle Ntie-Kang </p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        University of Buea Center for Drug Discovery (UB-CeDD)
+                      </p>
+                  </div>
+                      <div class="quarto-title-meta-contents">
+            <p class="author">Abdoulaye Djimde </p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        </p><p>Developing Excellence in Leadership and Genomics Training for Malaria Elimination and Antimicrobial Resistance Control in Africa (DELGEME Plus)</p>
+                      <p></p>
+                    <p class="affiliation">
+                        </p><p>Parasites and Microbes Research and Training Center (PMRTC), University of Science, Techniques and Technologies of Bamako, Bamako, Mali</p>
+                      <p></p>
+                  </div>
+                    </div>
+        
+        <div class="quarto-title-meta">
+
+                      
+                <div>
+            <div class="quarto-title-meta-heading">Published</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date">July 28, 2026</p>
+            </div>
+          </div>
+          
+                
+              </div>
+      </div>
+      <div class="quarto-title-meta-column-end quarto-other-formats-target">
+      <div class="quarto-alternate-formats"><div class="quarto-title-meta-heading">Other Formats</div><div class="quarto-title-meta-contents"><p><a href="index.biorxiv.pdf"><i class="bi bi-file-pdf"></i>bioRxiv PDF</a></p></div><div class="quarto-title-meta-contents"><p><a href="supplement.pdf"><i class="bi bi-file-pdf"></i>Supplement PDF</a></p></div><div class="quarto-title-meta-contents"><p><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></p></div><div class="quarto-title-meta-contents"><p><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></p></div><div class="quarto-title-meta-contents"><p><a href="manuscript-meca.zip" data-meca-link="true"><i class="bi bi-archive"></i>MECA Bundle</a></p></div></div></div>
+    </div>
+
+    <div>
+      <div class="abstract">
+        <div class="block-title">Abstract</div>
+        <p>Malaria control is threatened by the continued emergence of drug-resistant <em>Plasmodium falciparum</em>, creating a need for compounds that act through new parasite targets. <em>P. falciparum</em> bromodomain protein 1 (PfBDP1) regulates genes required for erythrocyte invasion and represents a structurally characterized, parasite-specific target. We performed structure-based virtual screening of 4,671,138 in-stock compounds from the Enamine Screening Collection against the PfBDP1 bromodomain. Docked compounds were prioritized using docking score, physicochemical properties, pan-assay interference alerts, and pose-quality assessment. Five candidates and the co-crystallized ligand I5K were then evaluated using 100-ns molecular dynamics simulations and MM/GBSA endpoint binding-energy estimates. Z985612796 showed the most consistent computational profile, combining low protein and ligand deviations, limited atomic fluctuations, persistent hydrogen bonding, restricted conformational sampling, and a dominant low-energy basin. It also produced the most negative MM/GBSA estimate, −30.70 ± 0.63 kcal/mol, compared with −12.65 ± 0.56 kcal/mol for I5K. Z1723441401 and Z9302730850 also showed favorable calculated interactions but greater conformational heterogeneity. These findings prioritize Z985612796 for further evaluation as a potential PfBDP1-binding candidate. Further experimental binding and functional assays are required to confirm the predicted interaction and determine antimalarial activity.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="keywords">
+        <div class="block-title">Keywords</div>
+        <p>virtual screening, PfBDP1, drug discovery, plasmodium</p>
+      </div>
+    </div>
+
+    <div class="quarto-other-links-text-target">
+    </div>  </div>
+</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link" data-scroll-target="#sec-methods"><span class="header-section-number">2</span> Methods</a>
+  <ul class="collapse">
+  <li><a href="#study-design" id="toc-study-design" class="nav-link" data-scroll-target="#study-design"><span class="header-section-number">2.1</span> Study design</a></li>
+  <li><a href="#compound-library-and-ligand-preparation" id="toc-compound-library-and-ligand-preparation" class="nav-link" data-scroll-target="#compound-library-and-ligand-preparation"><span class="header-section-number">2.2</span> Compound library and ligand preparation</a></li>
+  <li><a href="#target-preparation" id="toc-target-preparation" class="nav-link" data-scroll-target="#target-preparation"><span class="header-section-number">2.3</span> Target preparation</a></li>
+  <li><a href="#docking-protocol-validation" id="toc-docking-protocol-validation" class="nav-link" data-scroll-target="#docking-protocol-validation"><span class="header-section-number">2.4</span> Docking-protocol validation</a></li>
+  <li><a href="#virtual-screening" id="toc-virtual-screening" class="nav-link" data-scroll-target="#virtual-screening"><span class="header-section-number">2.5</span> Virtual screening</a></li>
+  <li><a href="#post-docking-filtering-and-hit-selection" id="toc-post-docking-filtering-and-hit-selection" class="nav-link" data-scroll-target="#post-docking-filtering-and-hit-selection"><span class="header-section-number">2.6</span> Post-docking filtering and hit selection</a></li>
+  <li><a href="#in-silico-admet-profiling" id="toc-in-silico-admet-profiling" class="nav-link" data-scroll-target="#in-silico-admet-profiling"><span class="header-section-number">2.7</span> In silico ADMET profiling</a></li>
+  <li><a href="#molecular-dynamics-and-mmgbsa-analysis" id="toc-molecular-dynamics-and-mmgbsa-analysis" class="nav-link" data-scroll-target="#molecular-dynamics-and-mmgbsa-analysis"><span class="header-section-number">2.8</span> Molecular dynamics and MM/GBSA analysis</a>
+  <ul class="collapse">
+  <li><a href="#molecular-dynamics-simulations" id="toc-molecular-dynamics-simulations" class="nav-link" data-scroll-target="#molecular-dynamics-simulations"><span class="header-section-number">2.8.1</span> Molecular dynamics simulations</a></li>
+  <li><a href="#trajectory-analysis" id="toc-trajectory-analysis" class="nav-link" data-scroll-target="#trajectory-analysis"><span class="header-section-number">2.8.2</span> Trajectory analysis</a></li>
+  <li><a href="#mmgbsa-calculations" id="toc-mmgbsa-calculations" class="nav-link" data-scroll-target="#mmgbsa-calculations"><span class="header-section-number">2.8.3</span> MM/GBSA calculations</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion"><span class="header-section-number">3</span> Results and Discussion</a>
+  <ul class="collapse">
+  <li><a href="#selected-candidate-structures" id="toc-selected-candidate-structures" class="nav-link" data-scroll-target="#selected-candidate-structures"><span class="header-section-number">3.1</span> Selected candidate structures</a></li>
+  <li><a href="#molecular-dynamics-and-mmgbsa-analysis-1" id="toc-molecular-dynamics-and-mmgbsa-analysis-1" class="nav-link" data-scroll-target="#molecular-dynamics-and-mmgbsa-analysis-1"><span class="header-section-number">3.2</span> Molecular dynamics and MM/GBSA analysis</a>
+  <ul class="collapse">
+  <li><a href="#structural-stability-and-intermolecular-interactions" id="toc-structural-stability-and-intermolecular-interactions" class="nav-link" data-scroll-target="#structural-stability-and-intermolecular-interactions"><span class="header-section-number">3.2.1</span> Structural stability and intermolecular interactions</a></li>
+  <li><a href="#conformational-sampling" id="toc-conformational-sampling" class="nav-link" data-scroll-target="#conformational-sampling"><span class="header-section-number">3.2.2</span> Conformational sampling</a></li>
+  <li><a href="#mmgbsa-binding-energy-estimates" id="toc-mmgbsa-binding-energy-estimates" class="nav-link" data-scroll-target="#mmgbsa-binding-energy-estimates"><span class="header-section-number">3.2.3</span> MM/GBSA binding-energy estimates</a></li>
+  </ul></li>
+  <li><a href="#predicted-physicochemical-and-admet-profiles" id="toc-predicted-physicochemical-and-admet-profiles" class="nav-link" data-scroll-target="#predicted-physicochemical-and-admet-profiles"><span class="header-section-number">3.3</span> Predicted physicochemical and ADMET profiles</a></li>
+  <li><a href="#study-limitations-and-next-steps" id="toc-study-limitations-and-next-steps" class="nav-link" data-scroll-target="#study-limitations-and-next-steps"><span class="header-section-number">3.4</span> Study limitations and next steps</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+  
+
+
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>Malaria remains a major cause of morbidity and mortality, with the greatest burden concentrated in sub-Saharan Africa <span class="citation" data-cites="WHO2025Malaria">(<a href="#ref-WHO2025Malaria" role="doc-biblioref">World Health Organization 2025</a>)</span>. <em>Plasmodium falciparum</em>, the species responsible for most malaria deaths, has repeatedly evolved resistance to antimalarial drugs, threatening the durability of current treatments <span class="citation" data-cites="Blasco2017">(<a href="#ref-Blasco2017" role="doc-biblioref">Blasco et al. 2017</a>)</span>. Sustained control and eventual elimination therefore require compounds with new mechanisms of action and activity against chemically distinct parasite targets <span class="citation" data-cites="Burrows2013TCP jnNewDevelopmentsAntimalarial2017">(<a href="#ref-Burrows2013TCP" role="doc-biblioref">Burrows et al. 2013</a>, <a href="#ref-jnNewDevelopmentsAntimalarial2017" role="doc-biblioref">2017</a>)</span>. Target-based discovery can complement phenotypic screening by linking compound selection to a defined parasite protein and by enabling structure-guided optimization of initial hits <span class="citation" data-cites="Armstrong2023MalariaPharm">(<a href="#ref-Armstrong2023MalariaPharm" role="doc-biblioref">Armstrong et al. 2023</a>)</span>.</p>
+<p>Epigenetic regulation offers a comparatively underexplored source of antimalarial targets. Bromodomains recognize acetylated lysine residues and help translate chromatin modifications into changes in transcription. <em>P. falciparum</em> bromodomain protein 1 (PfBDP1; PF3D7_1033700) is particularly compelling because it is parasite-specific and controls genes required for erythrocyte invasion. Conditional depletion of PfBDP1 disrupts invasion-gene expression, reduces red-blood-cell invasion, and impairs parasite proliferation <span class="citation" data-cites="josling2015">(<a href="#ref-josling2015" role="doc-biblioref">Josling et al. 2015</a>)</span>. These findings connect PfBDP1 function directly to the pathogenic asexual blood stage and support its investigation as a chemically tractable target.</p>
+<p>Recent structural and chemical studies have strengthened this rationale. Small-molecule inhibitors have been shown to bind the PfBDP1 bromodomain with nanomolar affinity, and parasite sensitivity to PfBDP1 perturbation has been confirmed experimentally <span class="citation" data-cites="amannNovelInhibitorBromodomain2025">(<a href="#ref-amannNovelInhibitorBromodomain2025" role="doc-biblioref">Amann et al. 2025</a>)</span>. The same study reported the 1.56 Å crystal structure of PfBDP1 bound to the ligand MPM2 <span class="citation" data-cites="amann2024">(<a href="#ref-amann2024" role="doc-biblioref">Amann et al. 2024</a>)</span>. This high-resolution complex defines an experimentally observed binding site and provides a cognate ligand for validating a molecular-docking protocol. Such structural information makes large-scale virtual screening a practical way to search broad chemical space while prioritizing a manageable set of compounds for experimental testing. Structure-based screening has already yielded candidate inhibitors for other <em>P. falciparum</em> targets <span class="citation" data-cites="Godara2024MultiKinaseVS">(<a href="#ref-Godara2024MultiKinaseVS" role="doc-biblioref">Godara et al. 2024</a>)</span>.</p>
+<p>Here, we performed a structure-based virtual screen of 4,671,138 in-stock compounds from the Enamine Screening Collection against the PfBDP1 bromodomain. We first assessed whether the docking workflow could recover the crystallographic pose of MPM2, then screened the library using the validated binding site and search settings. Docked compounds were prioritized through score-based ranking, and physicochemical criteria, substructure alerts, and pose-quality checks. This workflow was designed to identify chemically plausible PfBDP1-binding candidates for subsequent molecular-dynamics and free-energy evaluation.</p>
+</section>
+<section id="sec-methods" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Methods</h1>
+<section id="study-design" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="study-design"><span class="header-section-number">2.1</span> Study design</h2>
+<p>We performed a structure-based virtual screen of the Enamine Screening Collection against <em>Plasmodium falciparum</em> bromodomain protein 1 (PfBDP1). The docking workflow comprised ligand and receptor preparation, cognate-ligand redocking, molecular docking, physicochemical filtering, substructure filtering, pose validation, and hit ranking.</p>
+</section>
+<section id="compound-library-and-ligand-preparation" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="compound-library-and-ligand-preparation"><span class="header-section-number">2.2</span> Compound library and ligand preparation</h2>
+<p>The Enamine Screening Collection archive available on 11 December 2025 contained 4,671,138 in-stock compounds. Beyond its physical availability, this collection was selected for its broad chemical diversity and enrichment in lead-like chemical space <span class="citation" data-cites="compound grygorenko2021">(<a href="#ref-compound" role="doc-biblioref"><em>Compound Collections - Enamine</em>, n.d.</a>; <a href="#ref-grygorenko2021" role="doc-biblioref">Grygorenko 2021</a>)</span>. Structures were processed from the supplied SDF archive with RDKit <span class="citation" data-cites="greglandrum2026">(<a href="#ref-greglandrum2026" role="doc-biblioref"><span class="nocase">Landrum et al.</span> 2026</a>)</span>. Records that could not be parsed or converted into three-dimensional molecular were excluded.</p>
+<p>Explicit hydrogen atoms were added to each retained molecule. Initial three-dimensional conformers were generated with the experimental-torsion knowledge distance-geometry method in RDKit and minimized with the MMFF94 force field. Ligands were then converted to AutoDock PDBQT with Meeko <span class="citation" data-cites="santos-martins2025">(<a href="#ref-santos-martins2025" role="doc-biblioref">Santos-Martins et al. 2025</a>)</span>. This step assigned AutoDock atom types, partial charges, and rotatable bonds.</p>
+</section>
+<section id="target-preparation" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="target-preparation"><span class="header-section-number">2.3</span> Target preparation</h2>
+<p>The 1.56 Å X-ray structure of PfBDP1 bound to MPM2 was identified as <a href="https://www.rcsb.org/structure/9HHC">PDB entry 9HHC</a>. The receptor coordinates were obtained from the <a href="https://pdb-redo.eu/db/9hhc/9hhc_final.pdb">PDB-REDO refined structure</a>. The ligand is recorded under chemical component identifier I5K. Chain A was retained as the receptor model. I5K was used as the reference structure for redocking.</p>
+<p>PDBFixer was used to replace nonstandard residues, add missing heavy atoms, and add hydrogen atoms at pH 7.4 <span class="citation" data-cites="eastman2017">(<a href="#ref-eastman2017" role="doc-biblioref">Eastman et al. 2017</a>)</span>. Crystallographic waters and other heterogens were removed. Hydrogen positions were optimized with Reduce <span class="citation" data-cites="laboratory2026 word1999">(<a href="#ref-laboratory2026" role="doc-biblioref">Laboratory 2026</a>; <a href="#ref-word1999" role="doc-biblioref">Word et al. 1999</a>)</span>, and the prepared protein was converted to PDBQT with Meeko <span class="citation" data-cites="santos-martins2025">(<a href="#ref-santos-martins2025" role="doc-biblioref">Santos-Martins et al. 2025</a>)</span>. The receptor was treated as rigid during docking.</p>
+</section>
+<section id="docking-protocol-validation" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="docking-protocol-validation"><span class="header-section-number">2.4</span> Docking-protocol validation</h2>
+<p>The protocol was validated by redocking I5K into its crystallographic binding site. The docking box was centered on the geometric center of I5K at (-8.197, 9.886, 17.988) Å and measured 25 × 25 × 25 Å. QuickVina 2.1 was evaluated at exhaustiveness values of 8, 16, 32, 64, 128, and 256 using otherwise identical receptor and box settings <span class="citation" data-cites="Trott2010">(<a href="#ref-Trott2010" role="doc-biblioref">Trott and Olson 2009</a>)</span>.</p>
+<p>For each setting, nine poses were generated. Heavy-atom root-mean-square deviations (RMSDs) from the crystallographic I5K coordinates were calculated with <code>obrms</code> in Open Babel <span class="citation" data-cites="OBoyle2011">(<a href="#ref-OBoyle2011" role="doc-biblioref">O’Boyle et al. 2011</a>)</span>. An RMSD below 2.0 Å was defined before analysis as successful recovery of the experimental binding mode. At exhaustiveness 32, the minimum RMSD was 1.019 Å (Supplementary Figure S1), confirming that the search space and docking settings could reproduce the cognate pose. Exhaustiveness 32 was therefore used for the production screen.</p>
+</section>
+<section id="virtual-screening" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="virtual-screening"><span class="header-section-number">2.5</span> Virtual screening</h2>
+<p>Prepared Enamine ligands were docked independently against rigid PfBDP1 with QuickVina 2.1 and the AutoDock Vina scoring function <span class="citation" data-cites="Trott2010">(<a href="#ref-Trott2010" role="doc-biblioref">Trott and Olson 2009</a>)</span>. The validated center, 25 Å box dimensions, and exhaustiveness of 32 were applied to every compound. Calculations were distributed as single-CPU jobs through the Open Science Pool <span class="citation" data-cites="osg2006">(<a href="#ref-osg2006" role="doc-biblioref">OSG 2006</a>)</span>. Docking scores were recorded in kcal mol<sup>-1</sup>, and the lowest-scoring pose of each successfully processed compound was retained for post-docking analysis.</p>
+</section>
+<section id="post-docking-filtering-and-hit-selection" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="post-docking-filtering-and-hit-selection"><span class="header-section-number">2.6</span> Post-docking filtering and hit selection</h2>
+<p>The resulting protein-ligand complexes were evaluated with PoseBusters 0.3.7 to identify chemically or geometrically implausible poses <span class="citation" data-cites="buttenschoen2024posebusters">(<a href="#ref-buttenschoen2024posebusters" role="doc-biblioref">Buttenschoen et al. 2024</a>)</span>. Only compounds with no failed PoseBusters tests were accepted. Passing structures were ranked by docking score. The five highest-priority compounds were selected for subsequent molecular-dynamics simulation and endpoint free-energy calculations.</p>
+</section>
+<section id="in-silico-admet-profiling" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="in-silico-admet-profiling"><span class="header-section-number">2.7</span> In silico ADMET profiling</h2>
+<p>The five candidates and I5K were profiled from their SMILES strings with ADMET-AI <span class="citation" data-cites="swansonADMETAIMachineLearning2024">(<a href="#ref-swansonADMETAIMachineLearning2024" role="doc-biblioref">Swanson et al. 2024</a>)</span>. We examined physicochemical descriptors, intestinal absorption and permeability, bioavailability, solubility, P-glycoprotein, cytochrome P450 interactions, AMES mutagenicity, clinical toxicity, drug-induced liver injury (DILI), and hERG inhibition. Molecular weight, lipophilicity, hydrogen bonding, and polar surface area were interpreted as early oral-drug-likeness indicators <span class="citation" data-cites="lipinski1997experimental">(<a href="#ref-lipinski1997experimental" role="doc-biblioref">Lipinski et al. 1997</a>)</span>. Classification outputs were treated as estimated probabilities of the positive dataset label, not experimental measurements. No probability threshold was used to accept or reject compounds. Profiles instead supported qualitative, multi-parameter prioritization aligned with antimalarial target candidate profiles <span class="citation" data-cites="jnNewDevelopmentsAntimalarial2017 Armstrong2023MalariaPharm">(<a href="#ref-jnNewDevelopmentsAntimalarial2017" role="doc-biblioref">Burrows et al. 2017</a>; <a href="#ref-Armstrong2023MalariaPharm" role="doc-biblioref">Armstrong et al. 2023</a>)</span>.</p>
+</section>
+<section id="molecular-dynamics-and-mmgbsa-analysis" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="molecular-dynamics-and-mmgbsa-analysis"><span class="header-section-number">2.8</span> Molecular dynamics and MM/GBSA analysis</h2>
+<section id="molecular-dynamics-simulations" class="level3" data-number="2.8.1">
+<h3 data-number="2.8.1" class="anchored" data-anchor-id="molecular-dynamics-simulations"><span class="header-section-number">2.8.1</span> Molecular dynamics simulations</h3>
+<p>The protein–ligand complexes obtained from molecular docking were subjected to molecular dynamics (MD) simulations using GROMACS version 2025.1 with the CHARMM36 additive force field <span class="citation" data-cites="abrahamGROMACSHighPerformance2015 huangCHARMM36AllatomAdditive2013">(<a href="#ref-abrahamGROMACSHighPerformance2015" role="doc-biblioref">Abraham et al. 2015</a>; <a href="#ref-huangCHARMM36AllatomAdditive2013" role="doc-biblioref">Huang and MacKerell 2013</a>)</span>. The simulation protocol was consistent with that employed in our previous computational studies <span class="citation" data-cites="ahmedChemicopharmacologicalComputationalEvaluation2026a ApplicationBioactiveMolecular2025">(<a href="#ref-ahmedChemicopharmacologicalComputationalEvaluation2026a" role="doc-biblioref">Ahmed et al. 2026</a>; <a href="#ref-ApplicationBioactiveMolecular2025" role="doc-biblioref"><span>“Application of Bioactive Molecular Networking to Identify Corneal-Cytoprotective Compounds from <span>Dialium</span> Cochinchinense <span>Pierre</span>. Leaves”</span> 2025</a>)</span>. Ligand topologies and force-field parameters were generated using the SwissParam server to ensure compatibility with the CHARMM force field <span class="citation" data-cites="SwissParamFastForce">(<a href="#ref-SwissParamFastForce" role="doc-biblioref"><em><span>SwissParam</span></em>, n.d.</a>)</span>. Each complex was placed in a triclinic simulation box with a minimum distance of 1.2 nm between the protein surface and the box boundary and solvated using the TIP3P water model. The systems were neutralized and supplemented with 0.15 M NaCl to mimic physiological ionic strength.</p>
+<!-- REVIEW TODO: Report PDB ID and chain, modeled residues, missing atoms or
+residues, termini, protonation states, retained waters and ions, ligand pose
+preparation, SwissParam version, ligand protonation/tautomer/net charge, and
+parameter-quality validation. -->
+<p>Prior to equilibration, each system underwent energy minimization using the steepest descent algorithm for a maximum of 50,000 steps or until the maximum force converged below 1000 kJ mol⁻¹ nm⁻¹. Long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.2 nm, whereas van der Waals interactions were treated using a force-switch scheme with a switching distance of 1.0 nm and a cutoff of 1.2 nm <span class="citation" data-cites="dardenParticleMeshEwald1993">(<a href="#ref-dardenParticleMeshEwald1993" role="doc-biblioref">Darden et al. 1993</a>)</span>. Periodic boundary conditions were applied in all three spatial dimensions.</p>
+<p>Following minimization, the systems were equilibrated in two consecutive phases under positional restraints applied to both the protein and ligand. The first equilibration consisted of a 100 ps NVT ensemble, during which the temperature was maintained at 300 K using the V-rescale thermostat with a coupling constant of 0.1 ps. This was followed by a 100 ps NPT equilibration at 300 K and 1 bar, employing the V-rescale thermostat and the C-rescale barostat with an isotropic pressure coupling constant of 2.0 ps <span class="citation" data-cites="bussiCanonicalSamplingVelocity2007">(<a href="#ref-bussiCanonicalSamplingVelocity2007" role="doc-biblioref">Bussi et al. 2007</a>)</span>. Hydrogen-containing bonds were constrained using the LINCS algorithm, allowing a 2 fs integration time step throughout the equilibration stages <span class="citation" data-cites="hessLINCSLinearConstraint1997">(<a href="#ref-hessLINCSLinearConstraint1997" role="doc-biblioref">Hess et al. 1997</a>)</span>.</p>
+<p>After equilibration, an unrestrained 100 ns production MD simulation was performed in the NPT ensemble using the same integration time step. Temperature was maintained at 300 K using the V-rescale thermostat, while pressure was controlled at 1 bar using the Parrinello–Rahman barostat with isotropic coupling <span class="citation" data-cites="bussiCanonicalSamplingVelocity2007 parrinelloPolymorphicTransitionsSingle1981">(<a href="#ref-bussiCanonicalSamplingVelocity2007" role="doc-biblioref">Bussi et al. 2007</a>; <a href="#ref-parrinelloPolymorphicTransitionsSingle1981" role="doc-biblioref">Parrinello and Rahman 1981</a>)</span>. Coordinates and energies were saved every 10 ps, yielding trajectories for subsequent structural and energetic analyses.</p>
+</section>
+<section id="trajectory-analysis" class="level3" data-number="2.8.2">
+<h3 data-number="2.8.2" class="anchored" data-anchor-id="trajectory-analysis"><span class="header-section-number">2.8.2</span> Trajectory analysis</h3>
+<p>Trajectory analyses were performed using the standard built-in GROMACS analysis tools. The structural stability and conformational behavior of each protein–ligand complex were evaluated by calculating the root-mean-square deviation (RMSD), root-mean-square fluctuation (RMSF), radius of gyration (Rg), solvent-accessible surface area (SASA), and intermolecular hydrogen bonds throughout the simulation. Principal component analysis (PCA) was carried out based on the covariance matrix of Cα atomic fluctuations after removal of overall translational and rotational motions. The first two principal components (PC1 and PC2) were subsequently used to construct the projected free-energy landscape (FEL), enabling characterization of the dominant conformational basins sampled during the simulations.</p>
+</section>
+<section id="mmgbsa-calculations" class="level3" data-number="2.8.3">
+<h3 data-number="2.8.3" class="anchored" data-anchor-id="mmgbsa-calculations"><span class="header-section-number">2.8.3</span> MM/GBSA calculations</h3>
+<p>The endpoint binding-energy estimates of the protein–ligand complexes were calculated using the gmx_MMPBSA package with the MM/GBSA approach <span class="citation" data-cites="valdes-tresancoGmx_MMPBSANewTool2021">(<a href="#ref-valdes-tresancoGmx_MMPBSANewTool2021" role="doc-biblioref">Valdés-Tresanco et al. 2021</a>)</span>. The total MM/GBSA binding-energy estimate (ΔG_MM/GBSA) was calculated as the sum of van der Waals, electrostatic, polar solvation, and nonpolar solvation energy contributions according to the MM/GBSA formalism:</p>
+<p><span class="math display">\[\Delta G_{\mathrm{MM/GBSA}}
+= \Delta G_{\mathrm{gas}} + \Delta G_{\mathrm{solv}}\]</span></p>
+<p>where:</p>
+<p><span class="math display">\[\Delta G_{\mathrm{gas}}
+= \Delta E_{\mathrm{VDW}} + \Delta E_{\mathrm{ELE}}\]</span></p>
+<p><span class="math display">\[\Delta G_{\mathrm{solv}}
+= \Delta E_{\mathrm{GB}} + \Delta E_{\mathrm{SURF}}\]</span></p>
+<blockquote class="blockquote">
+<p>ΔE<sub>VDW</sub>: van der Waals energy contribution</p>
+<p>ΔE<sub>ELE</sub>: electrostatic energy</p>
+<p>ΔE<sub>GB</sub>: polar solvation energy</p>
+<p>ΔE<sub>SURF</sub>: non-polar solvation energy <span class="citation" data-cites="valdes-tresancoGmx_MMPBSANewTool2021">(<a href="#ref-valdes-tresancoGmx_MMPBSANewTool2021" role="doc-biblioref">Valdés-Tresanco et al. 2021</a>)</span>.</p>
+</blockquote>
+<!-- REVIEW TODO: Report gmx_MMPBSA version and input file, start/end times,
+frame stride/count, single- versus multi-trajectory protocol, GB model, radii,
+dielectric constants, ionic strength, surface-area parameters, receptor and
+ligand masks, entropy treatment, and the definition of all ± values. -->
+</section>
+</section>
+</section>
+<section id="results-and-discussion" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Results and Discussion</h1>
+<section id="selected-candidate-structures" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="selected-candidate-structures"><span class="header-section-number">3.1</span> Selected candidate structures</h2>
+<p>The five Enamine candidates selected after docking and pose-quality filtering represented structurally diverse chemotypes, whereas I5K served as the crystallographic reference (<a href="#fig-selected-hits" class="quarto-xref">Figure&nbsp;1</a>). The candidates differed in molecular size, ring architecture, heteroatom content, substitution patterns, and stereochemical complexity. Z1723441401 and Z31277728 contain several carbonyl and heterocyclic features, while Z9033488415 and Z985612796 include extended aromatic systems. Z9302730850 combines fused heterocycles with a chlorophenyl substituent. I5K is smaller and less structurally elaborate than the screened candidates. This diversity enabled comparison of chemically distinct ligands during molecular dynamics, MM/GBSA estimation, and in silico ADMET profiling against the PfBDP1 bromodomain target in subsequent comparative analyses.</p>
+<div id="fig-selected-hits" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Chemical structures of five Enamine candidates and reference I5K">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-selected-hits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/058_enamine_candidates_i5k.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Chemical structures of the five selected Enamine candidates and the co-crystallized reference ligand I5K."><img src="figures/058_enamine_candidates_i5k.png" class="img-fluid figure-img" alt="Chemical structures of five Enamine candidates and reference I5K"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-selected-hits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Chemical structures of the five selected Enamine candidates and the co-crystallized reference ligand I5K.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="molecular-dynamics-and-mmgbsa-analysis-1" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="molecular-dynamics-and-mmgbsa-analysis-1"><span class="header-section-number">3.2</span> Molecular dynamics and MM/GBSA analysis</h2>
+<section id="structural-stability-and-intermolecular-interactions" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="structural-stability-and-intermolecular-interactions"><span class="header-section-number">3.2.1</span> Structural stability and intermolecular interactions</h3>
+<p>Molecular dynamics simulations were performed to evaluate five candidate compounds in complex with the bromodomain of <em>Plasmodium falciparum</em> bromodomain protein 1, using the co-crystallized ligand I5K as a reference. Each trajectory was propagated for 100 ns and contained 10,001 frames sampled at 10-ps intervals. Unless otherwise stated, time-averaged parameters were calculated over the 20–100 ns interval to minimize the influence of initial structural relaxation.</p>
+<!-- REVIEW TODO: Demonstrate stationarity of the 20–100 ns window using
+window-sensitivity or block analysis. Several traces show later transitions.
+-->
+<p>The I5K-bound complex maintained a mean protein backbone RMSD of 0.152 ± 0.025 nm. Mean protein RMSD values were 0.145 ± 0.021 nm for Z9033488415, 0.168 ± 0.027 nm for Z985612796, 0.213 ± 0.078 nm for Z1723441401, 0.433 ± 0.074 nm for Z31277728, and 0.403 ± 0.067 nm for Z9302730850. The radius of gyration remained within 1.635–1.672 nm across all systems.</p>
+<p>I5K exhibited the lowest ligand RMSD at 0.071 ± 0.026 nm, followed by Z985612796, Z9302730850, and Z1723441401 at 0.109 ± 0.013, 0.121 ± 0.009, and 0.128 ± 0.039 nm, respectively. Z31277728 displayed a ligand RMSD of 0.150 ± 0.025 nm. Z9033488415 had the highest ligand RMSD at 0.286 ± 0.014 nm despite its low protein backbone RMSD.</p>
+<p>The Z985612796 complex had mean protein and ligand RMSF values of 0.131 ± 0.079 and 0.054 ± 0.030 nm, respectively. Z9302730850 showed the lowest ligand RMSF among the investigated compounds at 0.039 ± 0.018 nm and a protein RMSF of 0.177 ± 0.186 nm. Z9033488415 combined the lowest protein RMSF with the highest ligand RMSF.</p>
+<p>Mean Rg values varied by less than 0.04 nm across the systems, while mean SASA values remained between 87.18 and 89.21 nm². Z9302730850 displayed the largest fluctuations in both Rg and SASA. Z985612796 showed small Rg and SASA standard deviations.</p>
+<p>The MD-derived descriptors differentiated receptor stability from ligand retention. The narrow radius of gyration range across all systems indicates that the increased protein RMSD observed for the Z31277728 and Z9302730850 bound systems was not associated with global unfolding. These deviations are more consistent with system-dependent conformational rearrangements of the PfBDP1 bromodomain.</p>
+<p>Z1723441401 formed the highest mean number of hydrogen bonds at 2.34 ± 1.64. Z985612796 formed 2.17 ± 1.17 hydrogen bonds and retained at least one hydrogen bond in 87.4% of analyzed frames. Z9302730850 averaged 1.93 ± 1.53 hydrogen bonds. I5K and Z31277728 formed fewer persistent hydrogen bonds. Z9033488415 averaged 0.20 ± 0.44 hydrogen bonds and lacked hydrogen bonds in approximately 82% of frames.</p>
+<p>Z9033488415 showed a stable protein backbone but the highest ligand RMSD and ligand RMSF, together with limited hydrogen-bond retention. This combination suggests substantial ligand reorientation within the binding pocket. Z9302730850 instead combined the lowest ligand RMSF with greater protein flexibility and larger Rg and SASA fluctuations. Z985612796 combined low protein and ligand deviations, limited fluctuations, stable compactness, and persistent hydrogen bonds, giving it the most consistent stability profile.</p>
+<div id="fig-md-stability" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Structural and interaction metrics for six PfBDP1–ligand complexes">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-md-stability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/pfbdp1-md-stability-interactions.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Structural stability, conformational flexibility, and intermolecular interactions of the PfBDP1–ligand complexes during 100 ns molecular dynamics simulations. (A) Protein backbone RMSD. (B) Ligand RMSD. (C) RMSF of PfBDP1. (D) Atom-wise RMSF of the bound ligands. (E) Radius of gyration (Rg). (F) Solvent-accessible surface area (SASA). (G) Number of intermolecular hydrogen bonds between PfBDP1 and the investigated ligands throughout the simulations."><img src="figures/pfbdp1-md-stability-interactions.jpeg" class="img-fluid figure-img" alt="Structural and interaction metrics for six PfBDP1–ligand complexes"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-md-stability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Structural stability, conformational flexibility, and intermolecular interactions of the PfBDP1–ligand complexes during 100 ns molecular dynamics simulations. (A) Protein backbone RMSD. (B) Ligand RMSD. (C) RMSF of PfBDP1. (D) Atom-wise RMSF of the bound ligands. (E) Radius of gyration (Rg). (F) Solvent-accessible surface area (SASA). (G) Number of intermolecular hydrogen bonds between PfBDP1 and the investigated ligands throughout the simulations.
+</figcaption>
+</figure>
+</div>
+<!-- REVIEW TODO: Revise source Figure 1: label panel D by ligand heavy-atom
+index or atom name, reconcile panel C with the stated mapping failure, add a
+clear shared legend near panels A–F, use color-blind-safe colors, and mark the
+20–100 ns summary window. The embedded source image is preserved unchanged.
+-->
+</section>
+<section id="conformational-sampling" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="conformational-sampling"><span class="header-section-number">3.2.2</span> Conformational sampling</h3>
+<p>Principal component analysis showed that I5K, Z9033488415, and Z985612796 occupied comparatively restricted regions of the plotted conformational space. Z1723441401 sampled a broader ensemble, while Z31277728 and Z9302730850 exhibited the largest dispersion along the principal components.</p>
+<p>The free-energy landscapes showed a principal low-energy basin for I5K and Z985612796, although the I5K basin was broader and contained closely related subminima. Z1723441401 populated two major low-energy regions, Z31277728 sampled two well-separated basins, and Z9302730850 displayed at least three distinct low-energy minima. Z9033488415 occupied a relatively concentrated basin.</p>
+<p>The concentrated Z9033488415 PCA/FEL basin may represent an alternative binding pose rather than retention of the initial docked orientation. Z9302730850’s relatively rigid ligand was accompanied by broader receptor motions and heterogeneous conformational sampling. Z31277728 also showed substantial protein rearrangement and two well-separated conformational basins. Z1723441401 formed the largest mean hydrogen-bond network, but its two main low-energy regions indicate greater ensemble heterogeneity than observed for Z985612796.</p>
+<div id="fig-pca-landscapes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="PCA and free-energy landscapes for six PfBDP1–ligand complexes">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pca-landscapes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/pfbdp1-pca-free-energy-landscapes.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Conformational sampling and free-energy landscapes of the PfBDP1–ligand complexes during 100 ns molecular dynamics simulations. (A) Three-dimensional principal component analysis (PCA) illustrating the conformational space sampled by each PfBDP1–ligand complex along the first three principal components (PC1, PC2, and PC3). (B) Three-dimensional free-energy landscapes (FELs) constructed from the principal components, highlighting the lower projected free-energy states sampled during the simulations."><img src="figures/pfbdp1-pca-free-energy-landscapes.jpeg" class="img-fluid figure-img" alt="PCA and free-energy landscapes for six PfBDP1–ligand complexes"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pca-landscapes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Conformational sampling and free-energy landscapes of the PfBDP1–ligand complexes during 100 ns molecular dynamics simulations. (A) Three-dimensional principal component analysis (PCA) illustrating the conformational space sampled by each PfBDP1–ligand complex along the first three principal components (PC1, PC2, and PC3). (B) Three-dimensional free-energy landscapes (FELs) constructed from the principal components, highlighting the lower projected free-energy states sampled during the simulations.
+</figcaption>
+</figure>
+</div>
+<!-- REVIEW TODO: Revise source Figure 2 using a common PCA basis and common
+axis limits, report explained variance, define the FEL calculation, and
+explain the approximately 28 kJ/mol ceiling. Prefer 2D contours or heat maps
+if source data are available. The embedded source image is preserved
+unchanged. -->
+</section>
+<section id="mmgbsa-binding-energy-estimates" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="mmgbsa-binding-energy-estimates"><span class="header-section-number">3.2.3</span> MM/GBSA binding-energy estimates</h3>
+<p><strong>Table 1. MM/GBSA energy components of the PfBDP1–ligand complexes.</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Ligand</strong></th>
+<th style="text-align: right;"><strong>ΔE<sub>VDW</sub></strong></th>
+<th style="text-align: right;"><strong>ΔE<sub>ELE</sub></strong></th>
+<th style="text-align: right;"><strong>ΔE<sub>GB</sub></strong></th>
+<th style="text-align: right;"><strong>ΔE<sub>SURF</sub></strong></th>
+<th style="text-align: right;"><strong>ΔG<sub>GAS</sub></strong></th>
+<th style="text-align: right;"><strong>ΔG<sub>SOLV</sub></strong></th>
+<th style="text-align: right;"><strong>ΔG<sub>MM/GBSA</sub></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>I5K</strong></td>
+<td style="text-align: right;">-14.59 ± 0.64</td>
+<td style="text-align: right;">-9.94 ± 0.45</td>
+<td style="text-align: right;">14.10 ± 0.60</td>
+<td style="text-align: right;">-2.22 ± 0.10</td>
+<td style="text-align: right;">-24.53 ± 1.06</td>
+<td style="text-align: right;">11.88 ± 0.51</td>
+<td style="text-align: right;">-12.65 ± 0.56</td>
+</tr>
+<tr class="even">
+<td><strong>Z1723441401</strong></td>
+<td style="text-align: right;">-31.59 ± 1.11</td>
+<td style="text-align: right;">-16.02 ± 0.62</td>
+<td style="text-align: right;">26.67 ± 0.96</td>
+<td style="text-align: right;">-4.00 ± 0.14</td>
+<td style="text-align: right;">-47.60 ± 1.70</td>
+<td style="text-align: right;">22.67 ± 0.82</td>
+<td style="text-align: right;">-24.93 ± 0.89</td>
+</tr>
+<tr class="odd">
+<td><strong>Z31277728</strong></td>
+<td style="text-align: right;">-34.49 ± 1.37</td>
+<td style="text-align: right;">-10.35 ± 0.51</td>
+<td style="text-align: right;">27.15 ± 1.11</td>
+<td style="text-align: right;">-4.44 ± 0.18</td>
+<td style="text-align: right;">-44.84 ± 1.83</td>
+<td style="text-align: right;">22.70 ± 0.94</td>
+<td style="text-align: right;">-22.13 ± 0.90</td>
+</tr>
+<tr class="even">
+<td><strong>Z9033488415</strong></td>
+<td style="text-align: right;">-28.96 ± 1.26</td>
+<td style="text-align: right;">12.85 ± 0.84</td>
+<td style="text-align: right;">4.86 ± 1.46</td>
+<td style="text-align: right;">-3.59 ± 0.16</td>
+<td style="text-align: right;">-16.11 ± 1.92</td>
+<td style="text-align: right;">1.27 ± 1.32</td>
+<td style="text-align: right;">-14.85 ± 0.66</td>
+</tr>
+<tr class="odd">
+<td><strong>Z9302730850</strong></td>
+<td style="text-align: right;">-28.75 ± 1.21</td>
+<td style="text-align: right;">-18.63 ± 0.81</td>
+<td style="text-align: right;">27.43 ± 1.15</td>
+<td style="text-align: right;">-3.64 ± 0.15</td>
+<td style="text-align: right;">-47.37 ± 1.99</td>
+<td style="text-align: right;">23.79 ± 1.00</td>
+<td style="text-align: right;">-23.58 ± 1.00</td>
+</tr>
+<tr class="even">
+<td><strong>Z985612796</strong></td>
+<td style="text-align: right;">-40.68 ± 0.81</td>
+<td style="text-align: right;">-18.35 ± 0.42</td>
+<td style="text-align: right;">33.48 ± 0.68</td>
+<td style="text-align: right;">-5.15 ± 0.10</td>
+<td style="text-align: right;">-59.03 ± 1.19</td>
+<td style="text-align: right;">28.33 ± 0.58</td>
+<td style="text-align: right;">-30.70 ± 0.63</td>
+</tr>
+</tbody>
+</table>
+<p><em>Unit: kcal/mol.</em></p>
+<p>Z985612796 had the most negative endpoint binding-energy estimate at −30.70 ± 0.63 kcal/mol, compared with −12.65 ± 0.56 kcal/mol for I5K. Z1723441401, Z9302730850, and Z31277728 yielded estimates of −24.93 ± 0.89, −23.58 ± 1.00, and −22.13 ± 0.90 kcal/mol, respectively. Z9033488415 yielded an estimate of −14.85 ± 0.66 kcal/mol.</p>
+<p>For Z985612796, the van der Waals and electrostatic contributions were −40.68 and −18.35 kcal/mol, respectively, while the generalized Born polar solvation contribution was 33.48 kcal/mol. Z9033488415 had an electrostatic contribution of +12.85 kcal/mol.</p>
+<p>The unfavorable electrostatic component for Z9033488415 suggests that its endpoint estimate was governed mainly by nonpolar contacts. Z31277728 retained a negative endpoint estimate despite its substantial protein rearrangement, while Z1723441401 combined a negative estimate with the largest mean hydrogen-bond network.</p>
+<p>The favorable estimate for Z985612796 was driven primarily by its strong van der Waals contribution together with favorable electrostatic interactions. Although these contributions were partly offset by the generalized Born polar solvation penalty, its total endpoint estimate remained more negative than that of I5K under the present model. Across the single-trajectory descriptors, Z985612796 therefore showed the most consistent binding profile. These values should be interpreted as model-dependent endpoint energy estimates rather than experimental binding free energies.</p>
+</section>
+</section>
+<section id="predicted-physicochemical-and-admet-profiles" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="predicted-physicochemical-and-admet-profiles"><span class="header-section-number">3.3</span> Predicted physicochemical and ADMET profiles</h2>
+<p>All six compounds depicted in <a href="#fig-selected-hits" class="quarto-xref">Figure&nbsp;1</a> produced complete ADMET-AI profiles. Z1723441401 had molecular weight 448.5 Da, logP 1.38, QED 0.522, and polar surface area 129.2 Å². It combined high predicted intestinal absorption (0.988), moderate bioavailability (0.706), and low P-glycoprotein (0.228) and CYP-inhibition probabilities (0.007–0.166). Its main predicted liabilities were DILI (0.850), ClinTox (0.582), and borderline hERG inhibition (0.495).</p>
+<p>Z9302730850 had molecular weight 446.9 Da and the highest candidate QED (0.554), but logP was 4.94. Predicted bioavailability was 0.885, whereas P-glycoprotein, DILI, and hERG probabilities were 0.865, 0.949, and 0.700, respectively. CYP-inhibition probabilities ranged from 0.092 to 0.671.</p>
+<p>Z31277728 and Z9033488415 had molecular weights of 592.0 and 570.7 Da, logP values near 5, and QED values of 0.331. Both showed high DILI, hERG, P-glycoprotein, and multi-CYP probabilities. Z9033488415 had the strongest hERG (0.976), P-glycoprotein (0.969), and CYP3A4 (0.929) signals. Z985612796 was smaller (433.5 Da) but retained high DILI (0.935), hERG (0.795), and P-glycoprotein (0.952) probabilities; its AMES probability was 0.644.</p>
+<p>I5K had the most favorable molecular weight (254.3 Da), QED (0.604), and predicted solubility (logS −3.34). However, its AMES probability was 0.726, and CYP1A2, CYP2C19, CYP2C9, and CYP3A4 probabilities were 0.647–0.995. Thus, I5K served as a binding reference rather than a safety benchmark. Across the predicted profile, Z1723441401 provided the most balanced candidate starting point, followed by Z9302730850. All candidates retained liabilities requiring experimental confirmation.</p>
+<p>The binding and developability assessments therefore produced different rankings. Z985612796 led the MD/MM/GBSA assessment but retained several predicted safety and transport liabilities. Z1723441401 had a less favorable endpoint binding-energy estimate but the most balanced overall ADMET profile. These complementary criteria support prioritizing both compounds for experimental testing rather than selecting a candidate from binding-energy estimates alone.</p>
+</section>
+<section id="study-limitations-and-next-steps" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="study-limitations-and-next-steps"><span class="header-section-number">3.4</span> Study limitations and next steps</h2>
+<p>The analysis used one trajectory per complex, so the reported variation describes frames within individual trajectories rather than uncertainty between independent simulations. The 20–100 ns analysis window also requires stationarity and window-sensitivity assessment because several traces show later transitions. RMSF positions could not be assigned to PfBDP1 residues, and the PCA/FEL analysis requires a common basis, explained variance, and convergence assessment before quantitative comparison.</p>
+<p>Ligand parameter quality, simulation settings, MM/GBSA inputs, frame selection, dielectric parameters, and treatment of entropy must also be reported and validated. Independent MD replicas, convergence-aware uncertainty estimates, and experimental binding or functional assays are required before concluding that Z985612796 binds PfBDP1 more strongly than I5K or the other candidates.</p>
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-abrahamGROMACSHighPerformance2015" class="csl-entry" role="listitem">
+Abraham, Mark James, Teemu Murtola, Roland Schulz, et al. 2015. <span>“<span>GROMACS</span>: <span>High</span> Performance Molecular Simulations Through Multi-Level Parallelism from Laptops to Supercomputers.”</span> <em>SoftwareX</em> 1–2 (September): 19–25. <a href="https://doi.org/10.1016/j.softx.2015.06.001">https://doi.org/10.1016/j.softx.2015.06.001</a>.
+</div>
+<div id="ref-ahmedChemicopharmacologicalComputationalEvaluation2026a" class="csl-entry" role="listitem">
+Ahmed, Famim, Farjana Khatun, Le-Anh-Tuan Nguyen, et al. 2026. <span>“Chemico-Pharmacological and Computational Evaluation of <span>Artocarpus</span> Chaplasha; <span>Comparative</span> Anthelmintic and Cytotoxic Potential Between Bark and Seed.”</span> <em>Veterinary Parasitology</em> 343 (April): 110725. <a href="https://doi.org/10.1016/j.vetpar.2026.110725">https://doi.org/10.1016/j.vetpar.2026.110725</a>.
+</div>
+<div id="ref-amannNovelInhibitorBromodomain2025" class="csl-entry" role="listitem">
+Amann, Marius, Robin Warstat, Kay Kristin Rechten, et al. 2025. <span>“A <span>Novel Inhibitor</span> Against the <span>Bromodomain Protein</span> 1 of the <span>Malaria Pathogen</span> <span><em>Plasmodium Falciparum</em></span>.”</span> <em>ChemMedChem</em> 20 (11): e202500024. <a href="https://doi.org/10.1002/cmdc.202500024">https://doi.org/10.1002/cmdc.202500024</a>.
+</div>
+<div id="ref-amann2024" class="csl-entry" role="listitem">
+Amann, M., M. Huegle, O. Einsle, and S. Guenther. 2024. <em>Crystal Structure of the Plasmodium Falciparum Bromodomain PfBDP1 in Complex with MPM2</em>. Worldwide Protein Data Bank. <a href="https://doi.org/10.2210/pdb9hhc/pdb">https://doi.org/10.2210/pdb9hhc/pdb</a>.
+</div>
+<div id="ref-ApplicationBioactiveMolecular2025" class="csl-entry" role="listitem">
+<span>“Application of Bioactive Molecular Networking to Identify Corneal-Cytoprotective Compounds from <span>Dialium</span> Cochinchinense <span>Pierre</span>. Leaves.”</span> 2025. <em>Current Plant Biology</em> 42 (June): 100489. <a href="https://doi.org/10.1016/j.cpb.2025.100489">https://doi.org/10.1016/j.cpb.2025.100489</a>.
+</div>
+<div id="ref-Armstrong2023MalariaPharm" class="csl-entry" role="listitem">
+Armstrong, Jane F., Brice Campo, Stephen P. H. Alexander, et al. 2023. <span>“Advances in Malaria Pharmacology and the Online Guide to <span>MALARIA PHARMACOLOGY</span>: <span>IUPHAR</span> Review 38.”</span> <em>British Journal of Pharmacology</em> 180 (15): 1899–929. <a href="https://doi.org/10.1111/bph.16144">https://doi.org/10.1111/bph.16144</a>.
+</div>
+<div id="ref-Blasco2017" class="csl-entry" role="listitem">
+Blasco, Benjamin, Didier Leroy, and David A Fidock. 2017. <span>“Antimalarial Drug Resistance: Linking Plasmodium Falciparum Parasite Biology to the Clinic.”</span> <em>Nature Medicine</em> 23 (8): 917–28.
+</div>
+<div id="ref-jnNewDevelopmentsAntimalarial2017" class="csl-entry" role="listitem">
+Burrows, Jeremy N., Stephan Duparc, Winston E. Gutteridge, et al. 2017. <span>“New Developments in Anti-Malarial Target Candidate and Product Profiles.”</span> <em>Malaria Journal</em> 16 (1): 26. <a href="https://doi.org/10.1186/s12936-016-1675-x">https://doi.org/10.1186/s12936-016-1675-x</a>.
+</div>
+<div id="ref-Burrows2013TCP" class="csl-entry" role="listitem">
+Burrows, Jeremy N., Rob Hooft van Huijsduijnen, Jörg J. Möhrle, Claude Oeuvray, and Timothy NC Wells. 2013. <span>“Designing the Next Generation of Medicines for Malaria Control and Eradication.”</span> <em>Malaria Journal</em> 12 (1): 187. <a href="https://doi.org/10.1186/1475-2875-12-187">https://doi.org/10.1186/1475-2875-12-187</a>.
+</div>
+<div id="ref-bussiCanonicalSamplingVelocity2007" class="csl-entry" role="listitem">
+Bussi, Giovanni, Davide Donadio, and Michele Parrinello. 2007. <span>“Canonical Sampling Through Velocity Rescaling.”</span> <em>The Journal of Chemical Physics</em> 126 (1): 014101. <a href="https://doi.org/10.1063/1.2408420">https://doi.org/10.1063/1.2408420</a>.
+</div>
+<div id="ref-buttenschoen2024posebusters" class="csl-entry" role="listitem">
+Buttenschoen, Martin, Garrett M Morris, and Charlotte M Deane. 2024. <span>“PoseBusters: AI-Based Docking Methods Fail to Generate Physically Valid Poses or Generalise to Novel Sequences.”</span> <em>Chemical Science</em> 15 (9): 3130–39.
+</div>
+<div id="ref-compound" class="csl-entry" role="listitem">
+<em>Compound Collections - Enamine</em>. n.d. <a href="https://enamine.net/compound-collections">https://enamine.net/compound-collections</a>.
+</div>
+<div id="ref-dardenParticleMeshEwald1993" class="csl-entry" role="listitem">
+Darden, Tom, Darrin York, and Lee Pedersen. 1993. <span>“Particle Mesh <span>Ewald</span>: <span>An N</span><span><span class="math inline">\(\cdot\)</span></span>log(<span>N</span>) Method for <span>Ewald</span> Sums in Large Systems.”</span> <em>The Journal of Chemical Physics</em> 98 (12): 10089–92. <a href="https://doi.org/10.1063/1.464397">https://doi.org/10.1063/1.464397</a>.
+</div>
+<div id="ref-eastman2017" class="csl-entry" role="listitem">
+Eastman, Peter, Jason Swails, John D. Chodera, et al. 2017. <span>“OpenMM 7: Rapid Development of High Performance Algorithms for Molecular Dynamics.”</span> <em>PLOS Computational Biology</em> 13 (7): e1005659. <a href="https://doi.org/10.1371/journal.pcbi.1005659">https://doi.org/10.1371/journal.pcbi.1005659</a>.
+</div>
+<div id="ref-Godara2024MultiKinaseVS" class="csl-entry" role="listitem">
+Godara, Priya, K. Sony Reddy, Welka Sahu, et al. 2024. <span>“Structure-Based Virtual Screening Against Multiple <span class="nocase">Plasmodium falciparum</span> Kinases Reveals Antimalarial Compounds.”</span> <em>Molecular Diversity</em> 28 (6): 3661–81. <a href="https://doi.org/10.1007/s11030-023-10770-z">https://doi.org/10.1007/s11030-023-10770-z</a>.
+</div>
+<div id="ref-grygorenko2021" class="csl-entry" role="listitem">
+Grygorenko, Oleksandr O. 2021. <span>“Enamine Ltd.: The Science and Business of Organic Chemistry and Beyond.”</span> <em>European Journal of Organic Chemistry</em> 2021 (47): 6474–77. <a href="https://doi.org/10.1002/ejoc.202101210">https://doi.org/10.1002/ejoc.202101210</a>.
+</div>
+<div id="ref-hessLINCSLinearConstraint1997" class="csl-entry" role="listitem">
+Hess, Berk, Henk Bekker, Herman J. C. Berendsen, and Johannes G. E. M. Fraaije. 1997. <span>“<span>LINCS</span>: <span>A</span> Linear Constraint Solver for Molecular Simulations.”</span> <em>Journal of Computational Chemistry</em> 18 (12): 1463–72. <a href="https://doi.org/10.1002/(SICI)1096-987X(199709)18:12<1463::AID-JCC4>3.0.CO;2-H">https://doi.org/10.1002/(SICI)1096-987X(199709)18:12&lt;1463::AID-JCC4&gt;3.0.CO;2-H</a>.
+</div>
+<div id="ref-huangCHARMM36AllatomAdditive2013" class="csl-entry" role="listitem">
+Huang, Jing, and Alexander D. MacKerell. 2013. <span>“<span>CHARMM36</span> All-Atom Additive Protein Force Field: <span>Validation</span> Based on Comparison to <span>NMR</span> Data.”</span> <em>Journal of Computational Chemistry</em> 34 (25): 2135–45. <a href="https://doi.org/10.1002/jcc.23354">https://doi.org/10.1002/jcc.23354</a>.
+</div>
+<div id="ref-josling2015" class="csl-entry" role="listitem">
+Josling, Gabrielle&nbsp;A., Michaela Petter, Sophie&nbsp;C. Oehring, et al. 2015. <span>“A Plasmodium Falciparum Bromodomain Protein Regulates Invasion Gene Expression.”</span> <em>Cell Host &amp; Microbe</em> 17 (6): 741–51. <a href="https://doi.org/10.1016/j.chom.2015.05.009">https://doi.org/10.1016/j.chom.2015.05.009</a>.
+</div>
+<div id="ref-laboratory2026" class="csl-entry" role="listitem">
+Laboratory, Richardson. 2026. <em>Rlabduke/Reduce</em>. <a href="https://github.com/rlabduke/reduce">https://github.com/rlabduke/reduce</a>.
+</div>
+<div id="ref-greglandrum2026" class="csl-entry" role="listitem">
+<span class="nocase">Landrum, Greg, Paolo Tosco, Brian Kelley, et al.</span> 2026. <em>Rdkit/Rdkit: 2025_09_6 (<span>Q3</span> 2025) <span>Release</span></em>. V. Release_2025_09_6. Zenodo, released February 27. <a href="https://doi.org/10.5281/ZENODO.18797641">https://doi.org/10.5281/ZENODO.18797641</a>.
+</div>
+<div id="ref-lipinski1997experimental" class="csl-entry" role="listitem">
+Lipinski, Christopher A, Franco Lombardo, Beryl W Dominy, and Paul J Feeney. 1997. <span>“Experimental and Computational Approaches to Estimate Solubility and Permeability in Drug Discovery and Development Settings.”</span> <em>Advanced Drug Delivery Reviews</em> 23 (1-3): 3–25.
+</div>
+<div id="ref-OBoyle2011" class="csl-entry" role="listitem">
+O’Boyle, Noel M, Michael Banck, Craig A James, Chris Morley, Tim Vandermeersch, and Geoffrey R Hutchison. 2011. <span>“Open Babel: An Open Chemical Toolbox.”</span> <em>Journal of Cheminformatics</em> 3 (1). <a href="https://doi.org/10.1186/1758-2946-3-33">https://doi.org/10.1186/1758-2946-3-33</a>.
+</div>
+<div id="ref-osg2006" class="csl-entry" role="listitem">
+OSG. 2006. <em>OSPool</em>. <a href="https://doi.org/10.21231/906P-4D78">https://doi.org/10.21231/906P-4D78</a>.
+</div>
+<div id="ref-parrinelloPolymorphicTransitionsSingle1981" class="csl-entry" role="listitem">
+Parrinello, M., and A. Rahman. 1981. <span>“Polymorphic Transitions in Single Crystals: <span>A</span> New Molecular Dynamics Method.”</span> <em>Journal of Applied Physics</em> 52 (12): 7182–90. <a href="https://doi.org/10.1063/1.328693">https://doi.org/10.1063/1.328693</a>.
+</div>
+<div id="ref-santos-martins2025" class="csl-entry" role="listitem">
+Santos-Martins, Diogo, Yiran He, Jerome Eberhardt, et al. 2025. <span>“Meeko: Molecule Parametrization and Software Interoperability for Docking and Beyond.”</span> <em>Journal of Chemical Information and Modeling</em> 65 (24): 13045–50. <a href="https://doi.org/10.1021/acs.jcim.5c02271">https://doi.org/10.1021/acs.jcim.5c02271</a>.
+</div>
+<div id="ref-swansonADMETAIMachineLearning2024" class="csl-entry" role="listitem">
+Swanson, Kyle, Parker Walther, Jeremy Leitz, et al. 2024. <span>“<span>ADMET-AI</span>: A Machine Learning <span>ADMET</span> Platform for Evaluation of Large-Scale Chemical Libraries.”</span> <em>Bioinformatics</em> 40 (7): btae416. <a href="https://doi.org/10.1093/bioinformatics/btae416">https://doi.org/10.1093/bioinformatics/btae416</a>.
+</div>
+<div id="ref-SwissParamFastForce" class="csl-entry" role="listitem">
+<em><span>SwissParam</span>: <span>A</span> Fast Force Field Generation Tool for Small Organic Molecules - <span>Zoete</span> - 2011 - <span>Journal</span> of <span>Computational Chemistry</span> - <span>Wiley Online Library</span></em>. n.d. Https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.21816.
+</div>
+<div id="ref-Trott2010" class="csl-entry" role="listitem">
+Trott, Oleg, and Arthur J. Olson. 2009. <span>“AutoDock Vina: Improving the Speed and Accuracy of Docking with a New Scoring Function, Efficient Optimization, and Multithreading.”</span> <em>Journal of Computational Chemistry</em> 31 (2): 455–61. <a href="https://doi.org/10.1002/jcc.21334">https://doi.org/10.1002/jcc.21334</a>.
+</div>
+<div id="ref-valdes-tresancoGmx_MMPBSANewTool2021" class="csl-entry" role="listitem">
+Valdés-Tresanco, Mario, Mario Valdés-Tresanco, Pedro Valiente, and Ernesto Moreno Frias. 2021. <span>“Gmx_<span>MMPBSA</span>: <span>A New Tool</span> to <span>Perform End-State Free Energy Calculations</span> with <span>GROMACS</span>.”</span> <em>Journal of Chemical Theory and Computation</em> 17 (September). <a href="https://doi.org/10.1021/acs.jctc.1c00645">https://doi.org/10.1021/acs.jctc.1c00645</a>.
+</div>
+<div id="ref-word1999" class="csl-entry" role="listitem">
+Word, J.Michael, Simon C. Lovell, Jane S. Richardson, and David C. Richardson. 1999. <span>“Asparagine and Glutamine: Using Hydrogen Atom Contacts in the Choice of Side-Chain Amide Orientation 1 1Edited by j. Thornton.”</span> <em>Journal of Molecular Biology</em> 285 (4): 1735–47. <a href="https://doi.org/10.1006/jmbi.1998.2401">https://doi.org/10.1006/jmbi.1998.2401</a>.
+</div>
+<div id="ref-WHO2025Malaria" class="csl-entry" role="listitem">
+World Health Organization. 2025. <em>Malaria</em>. <a href="https://www.who.int/news-room/fact-sheets/detail/malaria">https://www.who.int/news-room/fact-sheets/detail/malaria</a>.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
