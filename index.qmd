@@ -1,7 +1,7 @@
 ---
 title: "Bakary N'tji Diallo"
 description-meta: "Quarto Academic Website Template adapted by Dr. Gang He"
-image: "files/images/placeholder4.JPG"
+image: "files/images/bakary_profile_picture_new_from_linkedin_BND_png.jpeg"
 page-navigation: false
 toc: false
 #sidebar: false
