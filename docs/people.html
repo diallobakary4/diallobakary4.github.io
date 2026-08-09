@@ -277,10 +277,21 @@ window.Quarto = {
     <a class="nav-link active" href="./people.html" aria-current="page"> 
 <span class="menu-text">Group</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./notebooks/marimo/"> 
-<span class="menu-text">Playground</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-notebook" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Notebook</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-notebook">    
+        <li>
+    <a class="dropdown-item" href="./notebooks/marimo/index.html">
+ <span class="dropdown-text">Notebook Home</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./notebooks/marimo/wasm_chem_features.html">
+ <span class="dropdown-text">WASM Chem Features</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
