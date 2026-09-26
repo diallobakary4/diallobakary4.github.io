@@ -11,7 +11,7 @@
 <meta name="author" content="Laurent Dembélé">
 <meta name="author" content="Fidèle Ntie-Kang">
 <meta name="author" content="Abdoulaye Djimde">
-<meta name="dcterms.date" content="2026-08-13">
+<meta name="dcterms.date" content="2026-09-26">
 <meta name="keywords" content="virtual screening, PfBDP1, drug discovery, plasmodium">
 
 <title>Large-Scale Virtual Screening of 4.6 Million Enamine Compounds against Plasmodium Bromodomain PfBDP1</title>
@@ -62,7 +62,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7fca231f0f6bfd3bec1af756033c583c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6e694d1f7ac3fc8d536aaaaf25d41a81.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -133,10 +133,10 @@ predicted interaction and determine antimalarial activity.
 <meta name="citation_author" content="Laurent Dembélé">
 <meta name="citation_author" content="Fidèle Ntie-Kang">
 <meta name="citation_author" content="Abdoulaye Djimde">
-<meta name="citation_publication_date" content="2026-08-13">
-<meta name="citation_cover_date" content="2026-08-13">
+<meta name="citation_publication_date" content="2026-09-26">
+<meta name="citation_cover_date" content="2026-09-26">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-08-13">
+<meta name="citation_online_date" content="2026-09-26">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=RDKit: Open-source cheminformatics software;,citation_author=Greg Landrum;,citation_author=others;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://www.rdkit.org/;">
 <meta name="citation_reference" content="citation_title=Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings;,citation_author=Christopher A Lipinski;,citation_author=Franco Lombardo;,citation_author=Beryl W Dominy;,citation_author=Paul J Feeney;,citation_publication_date=1997;,citation_cover_date=1997;,citation_year=1997;,citation_issue=1-3;,citation_doi=10.1016/S0169-409X(96)00423-1;,citation_volume=23;,citation_journal_title=Advanced Drug Delivery Reviews;">
@@ -294,7 +294,7 @@ predicted interaction and determine antimalarial activity.
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">August 13, 2026</p>
+              <p class="date">September 26, 2026</p>
             </div>
           </div>
           
@@ -327,37 +327,39 @@ predicted interaction and determine antimalarial activity.
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link" data-scroll-target="#sec-methods"><span class="header-section-number">2</span> Methods</a>
+  <li><a href="#acronyms_HEADER_LOA" id="toc-acronyms_HEADER_LOA" class="nav-link active" data-scroll-target="#acronyms_HEADER_LOA"><span class="header-section-number">1</span> List Of Acronyms</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link" data-scroll-target="#sec-methods"><span class="header-section-number">3</span> Methods</a>
   <ul class="collapse">
-  <li><a href="#study-design" id="toc-study-design" class="nav-link" data-scroll-target="#study-design"><span class="header-section-number">2.1</span> Study design</a></li>
-  <li><a href="#compound-library-and-ligand-preparation" id="toc-compound-library-and-ligand-preparation" class="nav-link" data-scroll-target="#compound-library-and-ligand-preparation"><span class="header-section-number">2.2</span> Compound library and ligand preparation</a></li>
-  <li><a href="#target-preparation" id="toc-target-preparation" class="nav-link" data-scroll-target="#target-preparation"><span class="header-section-number">2.3</span> Target preparation</a></li>
-  <li><a href="#docking-protocol-validation" id="toc-docking-protocol-validation" class="nav-link" data-scroll-target="#docking-protocol-validation"><span class="header-section-number">2.4</span> Docking-protocol validation</a></li>
-  <li><a href="#virtual-screening" id="toc-virtual-screening" class="nav-link" data-scroll-target="#virtual-screening"><span class="header-section-number">2.5</span> Virtual screening</a></li>
-  <li><a href="#post-docking-filtering-and-hit-selection" id="toc-post-docking-filtering-and-hit-selection" class="nav-link" data-scroll-target="#post-docking-filtering-and-hit-selection"><span class="header-section-number">2.6</span> Post-docking filtering and hit selection</a></li>
-  <li><a href="#in-silico-admet-profiling" id="toc-in-silico-admet-profiling" class="nav-link" data-scroll-target="#in-silico-admet-profiling"><span class="header-section-number">2.7</span> In silico ADMET profiling</a></li>
-  <li><a href="#molecular-dynamics-and-mmgbsa-analysis" id="toc-molecular-dynamics-and-mmgbsa-analysis" class="nav-link" data-scroll-target="#molecular-dynamics-and-mmgbsa-analysis"><span class="header-section-number">2.8</span> Molecular dynamics and MM/GBSA analysis</a>
+  <li><a href="#study-design" id="toc-study-design" class="nav-link" data-scroll-target="#study-design"><span class="header-section-number">3.1</span> Study design</a></li>
+  <li><a href="#compound-library-and-ligand-preparation" id="toc-compound-library-and-ligand-preparation" class="nav-link" data-scroll-target="#compound-library-and-ligand-preparation"><span class="header-section-number">3.2</span> Compound library and ligand preparation</a></li>
+  <li><a href="#target-preparation" id="toc-target-preparation" class="nav-link" data-scroll-target="#target-preparation"><span class="header-section-number">3.3</span> Target preparation</a></li>
+  <li><a href="#docking-protocol-validation" id="toc-docking-protocol-validation" class="nav-link" data-scroll-target="#docking-protocol-validation"><span class="header-section-number">3.4</span> Docking-protocol validation</a></li>
+  <li><a href="#virtual-screening" id="toc-virtual-screening" class="nav-link" data-scroll-target="#virtual-screening"><span class="header-section-number">3.5</span> Virtual screening</a></li>
+  <li><a href="#post-docking-filtering-and-hit-selection" id="toc-post-docking-filtering-and-hit-selection" class="nav-link" data-scroll-target="#post-docking-filtering-and-hit-selection"><span class="header-section-number">3.6</span> Post-docking filtering and hit selection</a></li>
+  <li><a href="#in-silico-admet-profiling" id="toc-in-silico-admet-profiling" class="nav-link" data-scroll-target="#in-silico-admet-profiling"><span class="header-section-number">3.7</span> In silico ADMET profiling</a></li>
+  <li><a href="#molecular-dynamics-and-mmgbsa-analysis" id="toc-molecular-dynamics-and-mmgbsa-analysis" class="nav-link" data-scroll-target="#molecular-dynamics-and-mmgbsa-analysis"><span class="header-section-number">3.8</span> Molecular dynamics and MM/GBSA analysis</a>
   <ul class="collapse">
-  <li><a href="#molecular-dynamics-simulations" id="toc-molecular-dynamics-simulations" class="nav-link" data-scroll-target="#molecular-dynamics-simulations"><span class="header-section-number">2.8.1</span> Molecular dynamics simulations</a></li>
-  <li><a href="#trajectory-analysis" id="toc-trajectory-analysis" class="nav-link" data-scroll-target="#trajectory-analysis"><span class="header-section-number">2.8.2</span> Trajectory analysis</a></li>
-  <li><a href="#mmgbsa-calculations" id="toc-mmgbsa-calculations" class="nav-link" data-scroll-target="#mmgbsa-calculations"><span class="header-section-number">2.8.3</span> MM/GBSA calculations</a></li>
+  <li><a href="#molecular-dynamics-simulations" id="toc-molecular-dynamics-simulations" class="nav-link" data-scroll-target="#molecular-dynamics-simulations"><span class="header-section-number">3.8.1</span> Molecular dynamics simulations</a></li>
+  <li><a href="#trajectory-analysis" id="toc-trajectory-analysis" class="nav-link" data-scroll-target="#trajectory-analysis"><span class="header-section-number">3.8.2</span> Trajectory analysis</a></li>
+  <li><a href="#mmgbsa-calculations" id="toc-mmgbsa-calculations" class="nav-link" data-scroll-target="#mmgbsa-calculations"><span class="header-section-number">3.8.3</span> MM/GBSA calculations</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion"><span class="header-section-number">3</span> Results and Discussion</a>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion"><span class="header-section-number">4</span> Results and Discussion</a>
   <ul class="collapse">
-  <li><a href="#selected-candidate-structures" id="toc-selected-candidate-structures" class="nav-link" data-scroll-target="#selected-candidate-structures"><span class="header-section-number">3.1</span> Selected candidate structures</a></li>
-  <li><a href="#molecular-dynamics-and-mmgbsa-analysis-1" id="toc-molecular-dynamics-and-mmgbsa-analysis-1" class="nav-link" data-scroll-target="#molecular-dynamics-and-mmgbsa-analysis-1"><span class="header-section-number">3.2</span> Molecular dynamics and MM/GBSA analysis</a>
+  <li><a href="#selected-candidate-structures" id="toc-selected-candidate-structures" class="nav-link" data-scroll-target="#selected-candidate-structures"><span class="header-section-number">4.1</span> Selected candidate structures</a></li>
+  <li><a href="#molecular-dynamics-and-mmgbsa-analysis-1" id="toc-molecular-dynamics-and-mmgbsa-analysis-1" class="nav-link" data-scroll-target="#molecular-dynamics-and-mmgbsa-analysis-1"><span class="header-section-number">4.2</span> Molecular dynamics and MM/GBSA analysis</a>
   <ul class="collapse">
-  <li><a href="#structural-stability-and-intermolecular-interactions" id="toc-structural-stability-and-intermolecular-interactions" class="nav-link" data-scroll-target="#structural-stability-and-intermolecular-interactions"><span class="header-section-number">3.2.1</span> Structural stability and intermolecular interactions</a></li>
-  <li><a href="#conformational-sampling" id="toc-conformational-sampling" class="nav-link" data-scroll-target="#conformational-sampling"><span class="header-section-number">3.2.2</span> Conformational sampling</a></li>
-  <li><a href="#mmgbsa-binding-energy-estimates" id="toc-mmgbsa-binding-energy-estimates" class="nav-link" data-scroll-target="#mmgbsa-binding-energy-estimates"><span class="header-section-number">3.2.3</span> MM/GBSA binding-energy estimates</a></li>
+  <li><a href="#structural-stability-and-intermolecular-interactions" id="toc-structural-stability-and-intermolecular-interactions" class="nav-link" data-scroll-target="#structural-stability-and-intermolecular-interactions"><span class="header-section-number">4.2.1</span> Structural stability and intermolecular interactions</a></li>
+  <li><a href="#conformational-sampling" id="toc-conformational-sampling" class="nav-link" data-scroll-target="#conformational-sampling"><span class="header-section-number">4.2.2</span> Conformational sampling</a></li>
+  <li><a href="#mmgbsa-binding-energy-estimates" id="toc-mmgbsa-binding-energy-estimates" class="nav-link" data-scroll-target="#mmgbsa-binding-energy-estimates"><span class="header-section-number">4.2.3</span> MM/GBSA binding-energy estimates</a></li>
   </ul></li>
-  <li><a href="#predicted-physicochemical-and-admet-profiles" id="toc-predicted-physicochemical-and-admet-profiles" class="nav-link" data-scroll-target="#predicted-physicochemical-and-admet-profiles"><span class="header-section-number">3.3</span> Predicted physicochemical and ADMET profiles</a></li>
-  <li><a href="#study-limitations-and-next-steps" id="toc-study-limitations-and-next-steps" class="nav-link" data-scroll-target="#study-limitations-and-next-steps"><span class="header-section-number">3.4</span> Study limitations and next steps</a></li>
+  <li><a href="#predicted-physicochemical-and-admet-profiles" id="toc-predicted-physicochemical-and-admet-profiles" class="nav-link" data-scroll-target="#predicted-physicochemical-and-admet-profiles"><span class="header-section-number">4.3</span> Predicted physicochemical and ADMET profiles</a></li>
+  <li><a href="#study-limitations-and-next-steps" id="toc-study-limitations-and-next-steps" class="nav-link" data-scroll-target="#study-limitations-and-next-steps"><span class="header-section-number">4.4</span> Study limitations and next steps</a></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4</span> Conclusion</a></li>
-  <li><a href="#supplementary-data" id="toc-supplementary-data" class="nav-link" data-scroll-target="#supplementary-data"><span class="header-section-number">5</span> Supplementary Data</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5</span> Conclusion</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments"><span class="header-section-number">6</span> Acknowledgments</a></li>
+  <li><a href="#supplementary-data" id="toc-supplementary-data" class="nav-link" data-scroll-target="#supplementary-data"><span class="header-section-number">7</span> Supplementary Data</a></li>
   </ul>
 </nav>
 </div>
@@ -370,51 +372,60 @@ predicted interaction and determine antimalarial activity.
   
 
 
-<section id="introduction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<p>Malaria remains a major cause of morbidity and mortality, with the greatest burden concentrated in sub-Saharan Africa <span class="citation" data-cites="WHO2025Malaria">(<a href="#ref-WHO2025Malaria" role="doc-biblioref">World Health Organization 2025</a>)</span>. <em>Plasmodium falciparum</em>, the species responsible for most malaria deaths, has repeatedly evolved resistance to antimalarial drugs, threatening the durability of current treatments <span class="citation" data-cites="Blasco2017">(<a href="#ref-Blasco2017" role="doc-biblioref">Blasco et al. 2017</a>)</span>. Sustained control and eventual elimination therefore require compounds with new mechanisms of action and activity against chemically distinct parasite targets <span class="citation" data-cites="Burrows2013TCP jnNewDevelopmentsAntimalarial2017">(<a href="#ref-Burrows2013TCP" role="doc-biblioref">Burrows et al. 2013</a>, <a href="#ref-jnNewDevelopmentsAntimalarial2017" role="doc-biblioref">2017</a>)</span>. Target-based discovery can complement phenotypic screening by linking compound selection to a defined parasite protein and by enabling structure-guided optimization of initial hits <span class="citation" data-cites="Armstrong2023MalariaPharm">(<a href="#ref-Armstrong2023MalariaPharm" role="doc-biblioref">Armstrong et al. 2023</a>)</span>.</p>
-<p>Epigenetic regulation offers a comparatively underexplored source of antimalarial targets. Bromodomains recognize acetylated lysine residues and help translate chromatin modifications into changes in transcription. <em>P. falciparum</em> bromodomain protein 1 (PfBDP1; PF3D7_1033700) is particularly compelling because it is parasite-specific and controls genes required for erythrocyte invasion. Conditional depletion of PfBDP1 disrupts invasion-gene expression, reduces red-blood-cell invasion, and impairs parasite proliferation <span class="citation" data-cites="josling2015">(<a href="#ref-josling2015" role="doc-biblioref">Josling et al. 2015</a>)</span>. These findings connect PfBDP1 function directly to the pathogenic asexual blood stage and support its investigation as a chemically tractable target.</p>
-<p>Recent structural and chemical studies have strengthened this rationale. Small-molecule inhibitors have been shown to bind the PfBDP1 bromodomain with nanomolar affinity, and parasite sensitivity to PfBDP1 perturbation has been confirmed experimentally <span class="citation" data-cites="amannNovelInhibitorBromodomain2025">(<a href="#ref-amannNovelInhibitorBromodomain2025" role="doc-biblioref">Amann et al. 2025</a>)</span>. The same study reported the 1.56 Å crystal structure of PfBDP1 bound to the ligand I5K <span class="citation" data-cites="amann2024">(<a href="#ref-amann2024" role="doc-biblioref">Amann et al. 2024</a>)</span>. This high-resolution complex defines an experimentally observed binding site and provides a cognate ligand for validating a molecular-docking protocol. Such structural information makes large-scale virtual screening a practical way to search broad chemical space while prioritizing a manageable set of compounds for experimental testing. Structure-based screening has already yielded candidate inhibitors for other <em>P. falciparum</em> targets <span class="citation" data-cites="Godara2024MultiKinaseVS">(<a href="#ref-Godara2024MultiKinaseVS" role="doc-biblioref">Godara et al. 2024</a>)</span>.</p>
-<p>Here, we performed a structure-based virtual screen of 4,671,138 in-stock compounds from the Enamine Screening Collection against the PfBDP1 bromodomain. We first assessed whether the docking workflow could recover the crystallographic pose of I5K, then screened the library using the validated binding site and search settings. Docked compounds were prioritized through score-based ranking, drug-likeness filtering (QED ≥ 0.30), Lipinski rule-of-five assessment (≤2 violations), substructure alerts (≤2 PAINS matches), and pose-quality validation (PoseBusters). This workflow was designed to identify chemically plausible PfBDP1-binding candidates for subsequent molecular-dynamics and free-energy evaluation.</p>
+<section id="acronyms_HEADER_LOA" class="level1 loa" data-number="1">
+<h1 class="loa" data-number="1"><span class="header-section-number">1</span> List Of Acronyms</h1>
+<dl>
+<dt><span id="acronyms_PfBDP1">PfBDP1</span></dt>
+<dd>
+Plasmodium falciparum bromodomain protein 1
+</dd>
+</dl>
 </section>
-<section id="sec-methods" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Methods</h1>
-<section id="study-design" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="study-design"><span class="header-section-number">2.1</span> Study design</h2>
+<section id="introduction" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<p>Malaria remains a major cause of morbidity and mortality, with the greatest burden concentrated in sub-Saharan Africa <span class="citation" data-cites="WHO2025Malaria">(<a href="#ref-WHO2025Malaria" role="doc-biblioref">World Health Organization 2025</a>)</span>. <em>Plasmodium falciparum</em>, the species responsible for most malaria deaths, has repeatedly evolved resistance to antimalarial drugs, threatening the durability of current treatments <span class="citation" data-cites="Blasco2017">(<a href="#ref-Blasco2017" role="doc-biblioref">Blasco et al. 2017</a>)</span>. Sustained control and eventual elimination therefore require compounds with new mechanisms of action and activity against chemically distinct parasite targets <span class="citation" data-cites="Burrows2013TCP jnNewDevelopmentsAntimalarial2017">(<a href="#ref-Burrows2013TCP" role="doc-biblioref">Burrows et al. 2013</a>, <a href="#ref-jnNewDevelopmentsAntimalarial2017" role="doc-biblioref">2017</a>)</span>. Target-based discovery can complement phenotypic screening by linking compound selection to a defined parasite protein and by enabling structure-guided optimization of initial hits <span class="citation" data-cites="Armstrong2023MalariaPharm">(<a href="#ref-Armstrong2023MalariaPharm" role="doc-biblioref">Armstrong et al. 2023</a>)</span>.</p>
+<p>Epigenetic regulation offers a comparatively underexplored source of antimalarial targets. Bromodomains recognize acetylated lysine residues and help translate chromatin modifications into changes in transcription. <em>P. falciparum</em> bromodomain protein 1 (PfBDP1; PF3D7_1033700) is particularly compelling because it controls genes required for erythrocyte invasion. Conditional depletion of PfBDP1 disrupts invasion-gene expression, reduces red-blood-cell invasion, and impairs parasite proliferation <span class="citation" data-cites="josling2015">(<a href="#ref-josling2015" role="doc-biblioref">Josling et al. 2015</a>)</span>. These findings connect PfBDP1 function directly to the pathogenic asexual blood stage and support its investigation as a chemically tractable target.</p>
+<p>Recent structural and chemical studies have strengthened this rationale. Small-molecule inhibitors have been shown to bind the PfBDP1 bromodomain with nanomolar affinity, and parasite sensitivity to PfBDP1 perturbation has been confirmed experimentally <span class="citation" data-cites="amannNovelInhibitorBromodomain2025">(<a href="#ref-amannNovelInhibitorBromodomain2025" role="doc-biblioref">Amann et al. 2025</a>)</span>. The same study reported the 1.56 Å crystal structure of PfBDP1 bound to the ligand I5K <span class="citation" data-cites="amann2024">(<a href="#ref-amann2024" role="doc-biblioref">Amann et al. 2024</a>)</span>. This high-resolution complex defines an experimentally observed binding site and provides a cognate ligand for validating a molecular-docking protocol. Such structural information makes large-scale virtual screening a practical way to search broad chemical space while prioritizing a manageable set of compounds for experimental testing. Structure-based screening has already yielded candidate inhibitors for other <em>P. falciparum</em> targets <span class="citation" data-cites="Godara2024MultiKinaseVS">(<a href="#ref-Godara2024MultiKinaseVS" role="doc-biblioref">Godara et al. 2024</a>)</span>.</p>
+<p>Here, we performed a structure-based virtual screen of 4,671,138 in-stock compounds from the Enamine Screening Collection against the <a href="#acronyms_PfBDP1">Plasmodium falciparum bromodomain protein 1 (PfBDP1)</a> bromodomain. We first assessed whether the docking workflow could recover the crystallographic pose of I5K, then screened the library using the validated binding site and search settings. Docked compounds were prioritized through score-based ranking, drug-likeness filtering (QED ≥ 0.30), Lipinski rule-of-five assessment (≤2 violations), substructure alerts (≤2 PAINS matches), and pose-quality validation (PoseBusters). This workflow was designed to identify chemically plausible PfBDP1-binding candidates for subsequent molecular-dynamics and free-energy evaluation.</p>
+</section>
+<section id="sec-methods" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Methods</h1>
+<section id="study-design" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="study-design"><span class="header-section-number">3.1</span> Study design</h2>
 <p>We performed a structure-based virtual screen of the Enamine Screening Collection against <em>Plasmodium falciparum</em> bromodomain protein 1 (PfBDP1). The docking workflow comprised ligand and receptor preparation, cognate-ligand redocking, molecular docking, physicochemical filtering, substructure filtering, pose validation, and hit ranking. The complete screening workflow is summarized in Supplementary Figure S2.</p>
 </section>
-<section id="compound-library-and-ligand-preparation" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="compound-library-and-ligand-preparation"><span class="header-section-number">2.2</span> Compound library and ligand preparation</h2>
+<section id="compound-library-and-ligand-preparation" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="compound-library-and-ligand-preparation"><span class="header-section-number">3.2</span> Compound library and ligand preparation</h2>
 <p>The Enamine Screening Collection archive available on 11 December 2025 contained 4,671,138 in-stock compounds. Beyond its physical availability, this collection was selected for its broad chemical diversity and enrichment in lead-like chemical space <span class="citation" data-cites="compound grygorenko2021">(<a href="#ref-compound" role="doc-biblioref"><em>Compound Collections - Enamine</em>, n.d.</a>; <a href="#ref-grygorenko2021" role="doc-biblioref">Grygorenko 2021</a>)</span>. Structures were processed from the supplied SDF archive with RDKit <span class="citation" data-cites="greglandrum2026">(<a href="#ref-greglandrum2026" role="doc-biblioref"><span class="nocase">Landrum et al.</span> 2026</a>)</span>. Records that could not be parsed or converted into three-dimensional molecular structures were excluded.</p>
 <p>Explicit hydrogen atoms were added to each retained molecule. Initial three-dimensional conformers were generated with the experimental-torsion knowledge distance-geometry method in RDKit and minimized with the MMFF94 force field. Ligands were then converted to AutoDock PDBQT with Meeko <span class="citation" data-cites="santos-martins2025">(<a href="#ref-santos-martins2025" role="doc-biblioref">Santos-Martins et al. 2025</a>)</span>. This step assigned AutoDock atom types, partial charges, and rotatable bonds.</p>
 </section>
-<section id="target-preparation" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="target-preparation"><span class="header-section-number">2.3</span> Target preparation</h2>
+<section id="target-preparation" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="target-preparation"><span class="header-section-number">3.3</span> Target preparation</h2>
 <p>The 1.56 Å X-ray structure of PfBDP1 bound to I5K was identified as <a href="https://www.rcsb.org/structure/9HHC">PDB entry 9HHC</a>. The receptor coordinates were obtained from the <a href="https://pdb-redo.eu/db/9hhc/9hhc_final.pdb">PDB-REDO refined structure</a>. The ligand is recorded under chemical component identifier I5K. Chain A was retained as the receptor model. I5K was used as the reference structure for redocking.</p>
 <p>PDBFixer was used to replace nonstandard residues, add missing heavy atoms, and add hydrogen atoms at pH 7.4 <span class="citation" data-cites="eastman2017">(<a href="#ref-eastman2017" role="doc-biblioref">Eastman et al. 2017</a>)</span>. Crystallographic waters and other heterogens were removed. Hydrogen positions were optimized with Reduce <span class="citation" data-cites="laboratory2026 word1999">(<a href="#ref-laboratory2026" role="doc-biblioref">Laboratory 2026</a>; <a href="#ref-word1999" role="doc-biblioref">Word et al. 1999</a>)</span>, and the prepared protein was converted to PDBQT with Meeko <span class="citation" data-cites="santos-martins2025">(<a href="#ref-santos-martins2025" role="doc-biblioref">Santos-Martins et al. 2025</a>)</span>. The receptor was treated as rigid during docking.</p>
 </section>
-<section id="docking-protocol-validation" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="docking-protocol-validation"><span class="header-section-number">2.4</span> Docking-protocol validation</h2>
+<section id="docking-protocol-validation" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="docking-protocol-validation"><span class="header-section-number">3.4</span> Docking-protocol validation</h2>
 <p>The protocol was validated by redocking I5K into its crystallographic binding site. The docking box was centered on the geometric center of I5K at (-8.197, 9.886, 17.988) Å and measured 25 × 25 × 25 Å. QuickVina 2.1 was evaluated at exhaustiveness values of 8, 16, 32, 64, 128, and 256 using otherwise identical receptor and box settings <span class="citation" data-cites="Trott2010">(<a href="#ref-Trott2010" role="doc-biblioref">Trott and Olson 2009</a>)</span>.</p>
 <p>For each setting, nine poses were generated. Heavy-atom root-mean-square deviations (RMSDs) from the crystallographic I5K coordinates were calculated with <code>obrms</code> in Open Babel <span class="citation" data-cites="OBoyle2011">(<a href="#ref-OBoyle2011" role="doc-biblioref">O’Boyle et al. 2011</a>)</span>. An RMSD below 2.0 Å was defined before analysis as successful recovery of the experimental binding mode irrespective of the docking pose number/ranking. At exhaustiveness 32, the minimum RMSD was 1.019 Å (Supplementary Figure S1), confirming that the search space and docking settings could reproduce the cognate pose. Exhaustiveness 32 was therefore used for the production screen.</p>
 </section>
-<section id="virtual-screening" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="virtual-screening"><span class="header-section-number">2.5</span> Virtual screening</h2>
+<section id="virtual-screening" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="virtual-screening"><span class="header-section-number">3.5</span> Virtual screening</h2>
 <p>Prepared Enamine ligands were docked independently against rigid PfBDP1 with QuickVina 2.1 and the AutoDock Vina scoring function <span class="citation" data-cites="Trott2010">(<a href="#ref-Trott2010" role="doc-biblioref">Trott and Olson 2009</a>)</span>. The validated center, 25 Å box dimensions, and exhaustiveness of 32 were applied to every compound. Calculations were distributed as single-CPU jobs through the Open Science Pool <span class="citation" data-cites="osg2006">(<a href="#ref-osg2006" role="doc-biblioref">OSG 2006</a>)</span>. Docking scores were recorded in kcal mol<sup>-1</sup>, and the lowest-scoring pose of each successfully processed compound was retained for post-docking analysis.</p>
 </section>
-<section id="post-docking-filtering-and-hit-selection" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="post-docking-filtering-and-hit-selection"><span class="header-section-number">2.6</span> Post-docking filtering and hit selection</h2>
+<section id="post-docking-filtering-and-hit-selection" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="post-docking-filtering-and-hit-selection"><span class="header-section-number">3.6</span> Post-docking filtering and hit selection</h2>
 <p>Docked compounds were ranked by ascending score. Candidates were filtered by physicochemical and structural criteria. Quantitative estimate of drug-likeness (QED) was calculated with RDKit <span class="citation" data-cites="Bickerton2012">(<a href="#ref-Bickerton2012" role="doc-biblioref">Bickerton et al. 2012</a>)</span>; compounds with QED ≥ 0.30 were retained. Lipinski rule-of-five violations were computed from molecular weight, logP, hydrogen-bond donors, and hydrogen-bond acceptors; candidates with two or fewer violations were accepted <span class="citation" data-cites="lipinski1997experimental">(<a href="#ref-lipinski1997experimental" role="doc-biblioref">Lipinski et al. 1997</a>)</span>. Potentially problematic substructures were assessed with RDKit’s SMARTS-based <code>FilterCatalog</code>, combining PAINS_A, PAINS_B, PAINS_C, PAINS, BRENK, and NIH collections <span class="citation" data-cites="greglandrum2026">(<a href="#ref-greglandrum2026" role="doc-biblioref"><span class="nocase">Landrum et al.</span> 2026</a>)</span>. Compounds matching two or fewer PAINS alerts were retained.</p>
 <p>The resulting protein-ligand complexes were evaluated with PoseBusters 0.3.7 to identify chemically or geometrically implausible poses <span class="citation" data-cites="buttenschoen2024posebusters">(<a href="#ref-buttenschoen2024posebusters" role="doc-biblioref">Buttenschoen et al. 2024</a>)</span>. Only compounds with no failed PoseBusters tests were accepted. Passing structures were ranked by docking score. The five highest-priority compounds were selected for subsequent molecular-dynamics simulation and endpoint free-energy calculations. Docking and hit-selection records are provided in <a href="#dat-screening-results" class="quarto-xref">Supplementary Data S1</a>.</p>
 </section>
-<section id="in-silico-admet-profiling" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="in-silico-admet-profiling"><span class="header-section-number">2.7</span> In silico ADMET profiling</h2>
+<section id="in-silico-admet-profiling" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="in-silico-admet-profiling"><span class="header-section-number">3.7</span> In silico ADMET profiling</h2>
 <p>The five candidates and I5K were profiled from their SMILES strings with ADMET-AI <span class="citation" data-cites="swansonADMETAIMachineLearning2024">(<a href="#ref-swansonADMETAIMachineLearning2024" role="doc-biblioref">Swanson et al. 2024</a>)</span>. We examined physicochemical descriptors, intestinal absorption and permeability, bioavailability, solubility, P-glycoprotein, cytochrome P450 interactions, AMES mutagenicity, clinical toxicity, drug-induced liver injury (DILI), and hERG inhibition. Molecular weight, lipophilicity, hydrogen bonding, and polar surface area were interpreted as early oral-drug-likeness indicators <span class="citation" data-cites="lipinski1997experimental">(<a href="#ref-lipinski1997experimental" role="doc-biblioref">Lipinski et al. 1997</a>)</span>. Classification outputs were treated as estimated probabilities of the positive dataset label, not experimental measurements. No probability threshold was used to accept or reject compounds. Profiles instead supported qualitative, multi-parameter prioritization aligned with antimalarial target candidate profiles <span class="citation" data-cites="jnNewDevelopmentsAntimalarial2017 Armstrong2023MalariaPharm">(<a href="#ref-jnNewDevelopmentsAntimalarial2017" role="doc-biblioref">Burrows et al. 2017</a>; <a href="#ref-Armstrong2023MalariaPharm" role="doc-biblioref">Armstrong et al. 2023</a>)</span>. Complete prediction outputs are provided in <a href="#dat-admet-profiles" class="quarto-xref">Supplementary Data S2</a>.</p>
 </section>
-<section id="molecular-dynamics-and-mmgbsa-analysis" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="molecular-dynamics-and-mmgbsa-analysis"><span class="header-section-number">2.8</span> Molecular dynamics and MM/GBSA analysis</h2>
-<section id="molecular-dynamics-simulations" class="level3" data-number="2.8.1">
-<h3 data-number="2.8.1" class="anchored" data-anchor-id="molecular-dynamics-simulations"><span class="header-section-number">2.8.1</span> Molecular dynamics simulations</h3>
+<section id="molecular-dynamics-and-mmgbsa-analysis" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="molecular-dynamics-and-mmgbsa-analysis"><span class="header-section-number">3.8</span> Molecular dynamics and MM/GBSA analysis</h2>
+<section id="molecular-dynamics-simulations" class="level3" data-number="3.8.1">
+<h3 data-number="3.8.1" class="anchored" data-anchor-id="molecular-dynamics-simulations"><span class="header-section-number">3.8.1</span> Molecular dynamics simulations</h3>
 <p>The protein–ligand complexes obtained from molecular docking were subjected to molecular dynamics (MD) simulations using GROMACS version 2025.1 with the CHARMM36 additive force field <span class="citation" data-cites="abrahamGROMACSHighPerformance2015 huangCHARMM36AllatomAdditive2013">(<a href="#ref-abrahamGROMACSHighPerformance2015" role="doc-biblioref">Abraham et al. 2015</a>; <a href="#ref-huangCHARMM36AllatomAdditive2013" role="doc-biblioref">Huang and MacKerell 2013</a>)</span>. The simulation protocol was consistent with that employed in our previous computational studies <span class="citation" data-cites="ahmedChemicopharmacologicalComputationalEvaluation2026a nguyenApplicationBioactiveMolecular2025">(<a href="#ref-ahmedChemicopharmacologicalComputationalEvaluation2026a" role="doc-biblioref">Ahmed et al. 2026</a>; <a href="#ref-nguyenApplicationBioactiveMolecular2025" role="doc-biblioref">Nguyen et al. 2025</a>)</span>. Ligand topologies and force-field parameters were generated using the SwissParam server to ensure compatibility with the CHARMM force field <span class="citation" data-cites="SwissParamFastForce">(<a href="#ref-SwissParamFastForce" role="doc-biblioref"><em><span>SwissParam</span></em>, n.d.</a>)</span>. Each complex was placed in a triclinic simulation box with a minimum distance of 1.2 nm between the protein surface and the box boundary and solvated using the TIP3P water model. The systems were neutralized and supplemented with 0.15 M NaCl to mimic physiological ionic strength.</p>
 <!-- REVIEW TODO: Report PDB ID and chain, modeled residues, missing atoms or
 residues, termini, protonation states, retained waters and ions, ligand pose
@@ -424,12 +435,12 @@ parameter-quality validation. -->
 <p>Following minimization, the systems were equilibrated in two consecutive phases under positional restraints applied to both the protein and ligand. The first equilibration consisted of a 100 ps NVT ensemble, during which the temperature was maintained at 300 K using the V-rescale thermostat with a coupling constant of 0.1 ps. This was followed by a 100 ps NPT equilibration at 300 K and 1 bar, employing the V-rescale thermostat and the C-rescale barostat with an isotropic pressure coupling constant of 2.0 ps <span class="citation" data-cites="bussiCanonicalSamplingVelocity2007">(<a href="#ref-bussiCanonicalSamplingVelocity2007" role="doc-biblioref">Bussi et al. 2007</a>)</span>. Hydrogen-containing bonds were constrained using the LINCS algorithm, allowing a 2 fs integration time step throughout the equilibration stages <span class="citation" data-cites="hessLINCSLinearConstraint1997">(<a href="#ref-hessLINCSLinearConstraint1997" role="doc-biblioref">Hess et al. 1997</a>)</span>.</p>
 <p>After equilibration, an unrestrained 100 ns production MD simulation was performed in the NPT ensemble using the same integration time step. Temperature was maintained at 300 K using the V-rescale thermostat, while pressure was controlled at 1 bar using the Parrinello–Rahman barostat with isotropic coupling <span class="citation" data-cites="bussiCanonicalSamplingVelocity2007 parrinelloPolymorphicTransitionsSingle1981">(<a href="#ref-bussiCanonicalSamplingVelocity2007" role="doc-biblioref">Bussi et al. 2007</a>; <a href="#ref-parrinelloPolymorphicTransitionsSingle1981" role="doc-biblioref">Parrinello and Rahman 1981</a>)</span>. Coordinates and energies were saved every 10 ps, yielding trajectories for subsequent structural and energetic analyses.</p>
 </section>
-<section id="trajectory-analysis" class="level3" data-number="2.8.2">
-<h3 data-number="2.8.2" class="anchored" data-anchor-id="trajectory-analysis"><span class="header-section-number">2.8.2</span> Trajectory analysis</h3>
+<section id="trajectory-analysis" class="level3" data-number="3.8.2">
+<h3 data-number="3.8.2" class="anchored" data-anchor-id="trajectory-analysis"><span class="header-section-number">3.8.2</span> Trajectory analysis</h3>
 <p>Trajectory analyses were performed using the standard built-in GROMACS analysis tools. The structural stability and conformational behavior of each protein–ligand complex were evaluated by calculating the root-mean-square deviation (RMSD), root-mean-square fluctuation (RMSF), radius of gyration (Rg), solvent-accessible surface area (SASA), and intermolecular hydrogen bonds throughout the simulation. Principal component analysis (PCA) was carried out based on the covariance matrix of Cα atomic fluctuations after removal of overall translational and rotational motions. The first two principal components (PC1 and PC2) were subsequently used to construct the projected free-energy landscape (FEL), enabling characterization of the dominant conformational basins sampled during the simulations.</p>
 </section>
-<section id="mmgbsa-calculations" class="level3" data-number="2.8.3">
-<h3 data-number="2.8.3" class="anchored" data-anchor-id="mmgbsa-calculations"><span class="header-section-number">2.8.3</span> MM/GBSA calculations</h3>
+<section id="mmgbsa-calculations" class="level3" data-number="3.8.3">
+<h3 data-number="3.8.3" class="anchored" data-anchor-id="mmgbsa-calculations"><span class="header-section-number">3.8.3</span> MM/GBSA calculations</h3>
 <p>The endpoint binding-energy estimates of the protein–ligand complexes were calculated using the gmx_MMPBSA package with the MM/GBSA approach <span class="citation" data-cites="valdes-tresancoGmx_MMPBSANewTool2021">(<a href="#ref-valdes-tresancoGmx_MMPBSANewTool2021" role="doc-biblioref">Valdés-Tresanco et al. 2021</a>)</span>. The total MM/GBSA binding-energy estimate (ΔG_MM/GBSA) was calculated as the sum of van der Waals, electrostatic, polar solvation, and nonpolar solvation energy contributions according to the MM/GBSA formalism:</p>
 <p><span class="math display">\[\Delta G_{\mathrm{MM/GBSA}}
 = \Delta G_{\mathrm{gas}} + \Delta G_{\mathrm{solv}}\]</span></p>
@@ -451,10 +462,10 @@ ligand masks, entropy treatment, and the definition of all ± values. -->
 </section>
 </section>
 </section>
-<section id="results-and-discussion" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Results and Discussion</h1>
-<section id="selected-candidate-structures" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="selected-candidate-structures"><span class="header-section-number">3.1</span> Selected candidate structures</h2>
+<section id="results-and-discussion" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Results and Discussion</h1>
+<section id="selected-candidate-structures" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="selected-candidate-structures"><span class="header-section-number">4.1</span> Selected candidate structures</h2>
 <p>The five Enamine candidates selected after docking and pose-quality filtering represented structurally diverse chemotypes, whereas I5K served as the crystallographic reference (<a href="#fig-selected-hits" class="quarto-xref">Figure&nbsp;1</a>). Docking and hit-selection records are provided in <a href="#dat-screening-results" class="quarto-xref">Supplementary Data S1</a>. The candidates differed in molecular size, ring architecture, heteroatom content, substitution patterns, and stereochemical complexity. Z1723441401 and Z31277728 contain several carbonyl and heterocyclic features, while Z9033488415 and Z985612796 include extended aromatic systems. Z9302730850 combines fused heterocycles with a chlorophenyl substituent. The annotated functional-group map (<a href="supplement.pdf">Supplementary Figure S3</a>) highlights the distribution of carbonyl groups, hydrogen-bond donors and acceptors, aromatic surfaces, and halogenated substituents across the series. I5K is smaller and less structurally elaborate than the screened candidates. These features provided chemical context for comparing hydrogen bonding, nonpolar interactions, MM/GBSA components, and predicted ADMET properties; they were not treated as evidence of specific protein contacts without trajectory-level confirmation.</p>
 <div id="fig-selected-hits" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Chemical structures of five Enamine candidates and reference I5K">
 <figure class="quarto-float quarto-float-fig figure">
@@ -467,10 +478,10 @@ Figure&nbsp;1: Chemical structures of the five selected Enamine candidates and t
 </figure>
 </div>
 </section>
-<section id="molecular-dynamics-and-mmgbsa-analysis-1" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="molecular-dynamics-and-mmgbsa-analysis-1"><span class="header-section-number">3.2</span> Molecular dynamics and MM/GBSA analysis</h2>
-<section id="structural-stability-and-intermolecular-interactions" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="structural-stability-and-intermolecular-interactions"><span class="header-section-number">3.2.1</span> Structural stability and intermolecular interactions</h3>
+<section id="molecular-dynamics-and-mmgbsa-analysis-1" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="molecular-dynamics-and-mmgbsa-analysis-1"><span class="header-section-number">4.2</span> Molecular dynamics and MM/GBSA analysis</h2>
+<section id="structural-stability-and-intermolecular-interactions" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="structural-stability-and-intermolecular-interactions"><span class="header-section-number">4.2.1</span> Structural stability and intermolecular interactions</h3>
 <p>Molecular dynamics simulations were performed to evaluate five candidate compounds in complex with the bromodomain of <em>Plasmodium falciparum</em> bromodomain protein 1, using the co-crystallized ligand I5K as a reference. Each trajectory was propagated for 100 ns and contained 10,001 frames sampled at 10-ps intervals (<a href="#fig-md-stability" class="quarto-xref">Figure&nbsp;2</a>). Unless otherwise stated, time-averaged parameters were calculated over the 20–100 ns interval to minimize the influence of initial structural relaxation.</p>
 <!-- REVIEW TODO: Demonstrate stationarity of the 20–100 ns window using
 window-sensitivity or block analysis. Several traces show later transitions.
@@ -498,8 +509,8 @@ clear shared legend near panels A–F, use color-blind-safe colors, and mark the
 20–100 ns summary window. The embedded source image is preserved unchanged.
 -->
 </section>
-<section id="conformational-sampling" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="conformational-sampling"><span class="header-section-number">3.2.2</span> Conformational sampling</h3>
+<section id="conformational-sampling" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="conformational-sampling"><span class="header-section-number">4.2.2</span> Conformational sampling</h3>
 <p>Principal component analysis showed that I5K, Z9033488415, and Z985612796 occupied comparatively restricted regions of the plotted conformational space. Z1723441401 sampled a broader ensemble, while Z31277728 and Z9302730850 exhibited the largest dispersion along the principal components. These conformational distributions are shown in <a href="#fig-pca-landscapes" class="quarto-xref">Figure&nbsp;3</a>, panel A.</p>
 <p>The free-energy landscapes showed a principal low-energy basin for I5K and Z985612796, although the I5K basin was broader and contained closely related subminima. Z1723441401 populated two major low-energy regions, Z31277728 sampled two well-separated basins, and Z9302730850 displayed at least three distinct low-energy minima. Z9033488415 occupied a relatively concentrated basin (<a href="#fig-pca-landscapes" class="quarto-xref">Figure&nbsp;3</a>, panel B).</p>
 <p>The concentrated Z9033488415 PCA/FEL basin may represent an alternative binding pose rather than retention of the initial docked orientation. Z9302730850’s relatively rigid ligand was accompanied by broader receptor motions and heterogeneous conformational sampling. Z31277728 also showed substantial protein rearrangement and two well-separated conformational basins. Z1723441401 formed the largest mean hydrogen-bond network, but its two main low-energy regions indicate greater ensemble heterogeneity than observed for Z985612796 (<a href="#fig-pca-landscapes" class="quarto-xref">Figure&nbsp;3</a>, panels A and B).</p>
@@ -519,8 +530,8 @@ explain the approximately 28 kJ/mol ceiling. Prefer 2D contours or heat maps
 if source data are available. The embedded source image is preserved
 unchanged. -->
 </section>
-<section id="mmgbsa-binding-energy-estimates" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="mmgbsa-binding-energy-estimates"><span class="header-section-number">3.2.3</span> MM/GBSA binding-energy estimates</h3>
+<section id="mmgbsa-binding-energy-estimates" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="mmgbsa-binding-energy-estimates"><span class="header-section-number">4.2.3</span> MM/GBSA binding-energy estimates</h3>
 <p>The component and total endpoint estimates are summarized in <a href="#tbl-mmgbsa" class="quarto-xref">Table&nbsp;1</a>.</p>
 <div id="tbl-mmgbsa" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -624,26 +635,30 @@ Table&nbsp;1: MM/GBSA energy components of the PfBDP1–ligand complexes.
 <p>The favorable estimate for Z985612796 was driven primarily by its strong van der Waals contribution together with favorable electrostatic interactions. Although these contributions were partly offset by the generalized Born polar solvation penalty, its total endpoint estimate remained more negative than that of I5K under the present model. Its extended aromatic surface and polar groups (<a href="supplement.pdf">Supplementary Figure S3</a>) are chemically consistent with opportunities for nonpolar and electrostatic interactions, respectively, but atom-level energy decomposition would be required to assign individual group contributions. Across the single-trajectory descriptors, Z985612796 therefore showed the most consistent binding profile. These values should be interpreted as model-dependent endpoint energy estimates rather than experimental binding free energies (<a href="#tbl-mmgbsa" class="quarto-xref">Table&nbsp;1</a>).</p>
 </section>
 </section>
-<section id="predicted-physicochemical-and-admet-profiles" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="predicted-physicochemical-and-admet-profiles"><span class="header-section-number">3.3</span> Predicted physicochemical and ADMET profiles</h2>
+<section id="predicted-physicochemical-and-admet-profiles" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="predicted-physicochemical-and-admet-profiles"><span class="header-section-number">4.3</span> Predicted physicochemical and ADMET profiles</h2>
 <p>All six compounds depicted in <a href="#fig-selected-hits" class="quarto-xref">Figure&nbsp;1</a> produced complete ADMET-AI profiles (<a href="#dat-admet-profiles" class="quarto-xref">Supplementary Data S2</a>). Z1723441401 had molecular weight 448.5 Da, logP 1.38, QED 0.522, and polar surface area 129.2 Å². It combined high predicted intestinal absorption (0.988), moderate bioavailability (0.706), and low P-glycoprotein (0.228) and CYP-inhibition probabilities (0.007–0.166). Its main predicted liabilities were DILI (0.850), ClinTox (0.582), and borderline hERG inhibition (0.495).</p>
 <p>Z9302730850 had molecular weight 446.9 Da and the highest candidate QED (0.554), but logP was 4.94. Predicted bioavailability was 0.885, whereas P-glycoprotein, DILI, and hERG probabilities were 0.865, 0.949, and 0.700, respectively. CYP-inhibition probabilities ranged from 0.092 to 0.671 (<a href="#dat-admet-profiles" class="quarto-xref">Supplementary Data S2</a>).</p>
 <p>Z31277728 and Z9033488415 had molecular weights of 592.0 and 570.7 Da, logP values near 5, and QED values of 0.331. Both showed high DILI, hERG, P-glycoprotein, and multi-CYP probabilities. Z9033488415 had the strongest hERG (0.976), P-glycoprotein (0.969), and CYP3A4 (0.929) signals (<a href="#dat-admet-profiles" class="quarto-xref">Supplementary Data S2</a>). Z985612796 was smaller (433.5 Da) but retained high DILI (0.935), hERG (0.795), and P-glycoprotein (0.952) probabilities; its AMES probability was 0.644 (<a href="#dat-admet-profiles" class="quarto-xref">Supplementary Data S2</a>).</p>
 <p>Across the predicted profile, Z1723441401 provided the most balanced candidate starting point, followed by Z9302730850. All candidates retained liabilities requiring experimental confirmation (<a href="#dat-admet-profiles" class="quarto-xref">Supplementary Data S2</a>).</p>
-<p>The binding and developability assessments therefore produced different rankings (<a href="#tbl-mmgbsa" class="quarto-xref">Table&nbsp;1</a> and <a href="#dat-admet-profiles" class="quarto-xref">Supplementary Data S2</a>). Z985612796 led the MD/MM/GBSA assessment but retained several predicted safety and transport liabilities. Z1723441401 had a less favorable endpoint binding-energy estimate but the most balanced overall ADMET profile. These complementary criteria support prioritizing both compounds for experimental testing rather than selecting a candidate from binding-energy estimates alone.</p>
+<p>The binding and developability assessments therefore produced different rankings (<a href="#tbl-mmgbsa" class="quarto-xref">Table&nbsp;1</a> and <a href="#dat-admet-profiles" class="quarto-xref">Supplementary Data S2</a>). Z985612796 ranked highest in the MD/MM/GBSA assessment but retained several predicted safety and transport liabilities. Z1723441401 had a less favorable endpoint binding-energy estimate but the most balanced overall ADMET profile. These complementary criteria support prioritizing both compounds for experimental testing rather than selecting a candidate from binding-energy estimates alone.</p>
 </section>
-<section id="study-limitations-and-next-steps" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="study-limitations-and-next-steps"><span class="header-section-number">3.4</span> Study limitations and next steps</h2>
+<section id="study-limitations-and-next-steps" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="study-limitations-and-next-steps"><span class="header-section-number">4.4</span> Study limitations and next steps</h2>
 <p>The analysis used one trajectory per complex, so the reported variation describes frames within individual trajectories rather than uncertainty between independent simulations. The 20–100 ns analysis window also requires stationarity and window-sensitivity assessment because several traces show later transitions. RMSF positions could not be assigned to PfBDP1 residues, and the PCA/FEL analysis requires a common basis, explained variance, and convergence assessment before quantitative comparison.</p>
 <p>Ligand parameter quality, simulation settings, MM/GBSA inputs, frame selection, dielectric parameters, and treatment of entropy must also be reported and validated. Independent MD replicas, convergence-aware uncertainty estimates, and experimental binding or functional assays are required before concluding that Z985612796 binds PfBDP1 more strongly than I5K or the other candidates.</p>
 </section>
 </section>
-<section id="conclusion" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Conclusion</h1>
-<p>This study screened 4,671,138 Enamine compounds against PfBDP1 and integrated docking, molecular dynamics, MM/GBSA, and predicted ADMET evidence to prioritize five candidates. Z985612796 emerged as the lead computational binding candidate, combining stable pocket retention, persistent hydrogen bonding, restricted conformational sampling, and the most negative endpoint binding-energy estimate. However, its predicted safety and transport liabilities, together with the use of a single trajectory per complex, make this prioritization a testable hypothesis rather than evidence of efficacy. Z1723441401 provides a complementary candidate with a more balanced predicted ADMET profile. Next steps should include replicated, convergence-assessed simulations; direct PfBDP1 binding measurements; biochemical and cellular target-engagement assays; parasite growth-inhibition studies; and experimental assessment of selectivity, cytotoxicity, and ADME properties. These studies will determine whether Z985612796 warrants medicinal-chemistry optimization as a PfBDP1-directed antimalarial lead.</p>
+<section id="conclusion" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Conclusion</h1>
+<p>This study screened 4,671,138 Enamine compounds against PfBDP1 and integrated docking, molecular dynamics, MM/GBSA, and predicted ADMET evidence to prioritize five candidates. Z985612796 emerged as the computationally prioritized binding candidate, combining stable pocket retention, persistent hydrogen bonding, restricted conformational sampling, and the most negative endpoint binding-energy estimate. However, its predicted safety and transport liabilities, together with the use of a single trajectory per complex, make this prioritization a testable hypothesis rather than evidence of efficacy. Z1723441401 provides a complementary candidate with a more balanced predicted ADMET profile. Next steps should include replicated, convergence-assessed simulations; direct PfBDP1 binding measurements; biochemical and cellular target-engagement assays; parasite growth-inhibition studies; and experimental assessment of selectivity, cytotoxicity, and ADME properties. These studies will determine whether Z985612796 warrants medicinal-chemistry optimization as a PfBDP1-directed antimalarial candidate.</p>
 </section>
-<section id="supplementary-data" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Supplementary Data</h1>
+<section id="acknowledgments" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Acknowledgments</h1>
+<p>This research was funded in whole or in part by Science for Africa Foundation to DELGEME Plus Del-22-013 with support from Wellcome Trust and the UK Foreign, Commonwealth &amp; Development Office and is part of the EDCTP 2 programme supported by the European Union. For purposes of open access, the author has applied a CC BY public copyright licence to any Author Accepted Manuscript version arising from this submission.</p>
+</section>
+<section id="supplementary-data" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Supplementary Data</h1>
 <div id="dat-screening-results" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-dat figure">
 <div aria-describedby="dat-screening-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
